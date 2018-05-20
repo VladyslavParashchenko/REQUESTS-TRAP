@@ -1,0 +1,13 @@
+<h1>Main#show_requests</h1>
+<p>Find me in app/views/main/show_requests.html.erb</p>
+<%= params.inspect %>
+<%= params[:trap_id] %><br>
+<p><%= request.remote_ip%></p>
+<p><%= request.original_fullpath %></p>
+<p><%= request.scheme %></p>
+<p><%= request.ip %></p>
+<p><%= cookies %></p>
+<p>1<% request.env['HTTP_COOKIE'] %></p>
+<p><% request.env.each do |key,value| %></p>
+  <%= key.to_s+'=>'+value.to_s %>
+<% end %>
