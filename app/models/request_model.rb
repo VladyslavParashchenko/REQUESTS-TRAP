@@ -1,0 +1,2 @@
+class RequestModel < ApplicationRecord
+end

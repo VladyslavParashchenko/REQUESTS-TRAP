@@ -1,13 +1,26 @@
-<h1>Main#show_requests</h1>
-<p>Find me in app/views/main/show_requests.html.erb</p>
-<%= params.inspect %>
-<%= params[:trap_id] %><br>
-<p><%= request.remote_ip%></p>
-<p><%= request.original_fullpath %></p>
-<p><%= request.scheme %></p>
-<p><%= request.ip %></p>
-<p><%= cookies %></p>
-<p>1<% request.env['HTTP_COOKIE'] %></p>
-<p><% request.env.each do |key,value| %></p>
-  <%= key.to_s+'=>'+value.to_s %>
-<% end %>
+<div class="table-container">
+<table>
+  <tr>
+    <th class="min-50">Query params</th>
+    <th class="min-50">Query string</th>
+    <th>Cookies</th>
+    <th>Headers</th>
+    <th class="min-50">Scheme</th>
+    <th class="min-50">Request method</th>
+    <th>Remote ip</th>
+    <th>Request date</th>
+  </tr>
+  <% @requests.each do |app_request| %>
+  <tr>
+    <td><%= app_request.query_params %></td>
+    <td><%= app_request.query_string %></td>
+    <td><%= app_request.cookies %></td>
+    <td><%= app_request.headers %></td>
+    <td><%= app_request.scheme_request %></td>
+    <td><%= app_request.request_method %></td>
+    <td><%= app_request.remote_ip %></td>
+    <td><%= app_request.request_date %></td>
+  </tr>
+  <% end %>
+</table>
+</div>
