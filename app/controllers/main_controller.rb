@@ -17,12 +17,15 @@ class MainController < ApplicationController
     rqst.request_method = request.request_method
     rqst.scheme_request = request.scheme
     rqst.query_params = params.to_json
-    rqst.save
+    if rqst.save
+      rendered_row = render_to_string'_table_row', locals: {app_request:rqst}, layout:false
+      ActionCable.server.broadcast('r'+params[:trap_id], rendered_row)
+    end
   end
 
   def show_requests
-    @requests = RequestModel.where('trap_id = ?', params[:trap_id])
-    render 'main/request_not_found' if @requests.empty?
+    @requests = RequestModel.where('trap_id = ?', params[:trap_id]).order('request_date desc')
+    response.set_header('TRAP_ID', params[:trap_id])
   end
 
   def show_instructions; end

@@ -1,0 +1,9 @@
+I"š(function() {
+  App.cable.subscriptions.create("WebReuestChannel", {
+    received: function(data) {
+      return alert(data);
+    }
+  });
+
+}).call(this);
+:ET

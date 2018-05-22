@@ -1,0 +1,19 @@
+I"s(function() {
+  App.requests = App.cable.subscriptions.create({
+    channel: "RequestsChannel",
+    trap_id: '41'
+  }, {
+    connected: function() {
+      return alert('df');
+    },
+    disconnected: function() {},
+    received: function(data) {
+      return alert('data');
+    },
+    update: function() {
+      return this.perform('update');
+    }
+  });
+
+}).call(this);
+:ET

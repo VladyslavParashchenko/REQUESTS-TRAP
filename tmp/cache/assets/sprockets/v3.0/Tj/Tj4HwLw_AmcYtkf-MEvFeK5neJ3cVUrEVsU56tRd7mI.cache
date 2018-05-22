@@ -1,0 +1,25 @@
+I"B(function() {
+  alert(window.host.split('/')[1]);
+
+  window.onload = function() {
+    if (document.querySelector('.table-container') !== null) {
+      return App.requests = App.cable.subscriptions.create({
+        channel: "RequestsChannel",
+        trap_id: '35'
+      }, {
+        connected: function() {
+          return alert('df');
+        },
+        disconnected: function() {},
+        received: function(data) {
+          return alert(data);
+        },
+        update: function() {
+          return this.perform('update');
+        }
+      });
+    }
+  };
+
+}).call(this);
+:ET

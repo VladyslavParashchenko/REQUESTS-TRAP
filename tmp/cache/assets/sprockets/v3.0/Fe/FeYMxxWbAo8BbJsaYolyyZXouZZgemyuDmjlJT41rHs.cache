@@ -1,0 +1,18 @@
+I"^(function() {
+  App.requests = App.cable.subscriptions.create({
+    channel: "RequestsChannel"
+  }, {
+    connected: function() {
+      return alert('df');
+    },
+    disconnected: function() {},
+    received: function(data) {
+      return alert('df');
+    },
+    update: function() {
+      return this.perform('update');
+    }
+  });
+
+}).call(this);
+:ET

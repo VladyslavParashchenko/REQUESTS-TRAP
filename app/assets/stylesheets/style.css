@@ -19,7 +19,7 @@ body{
 .container .instructions{
     color:white;
     font-size:18px;
-    width: 80%;
+    width: 90%;
 }
 .container .link a{
     display: block;
@@ -51,9 +51,15 @@ a:link,a:active,a:visited,a:hover {
 .table-container th{
     min-width: 100px;
 }
+.table-container td{
+    padding: 5px;
+}
 .table-container tr:nth-child(odd){
     background-color: #BBBBBB;
 }
 .table-container th.min-50{
     min-width: 60px;
+}
+h2{
+    text-align: center;
 }

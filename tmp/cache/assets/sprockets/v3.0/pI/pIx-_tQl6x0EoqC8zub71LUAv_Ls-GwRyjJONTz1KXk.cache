@@ -1,0 +1,23 @@
+I"Ž(function() {
+  window.onload = function() {
+    if (document.querySelector('.table-container') !== null) {
+      return App.requests = App.cable.subscriptions.create({
+        channel: "RequestsChannel",
+        trap_id: window.location.href.split('/')[3]
+      }, {
+        connected: function() {
+          return alert('df');
+        },
+        disconnected: function() {},
+        received: function(data) {
+          return document.querySelector('table').insertBefore(data, document.querySelector('table').firstChild);
+        },
+        update: function() {
+          return this.perform('update');
+        }
+      });
+    }
+  };
+
+}).call(this);
+:ET

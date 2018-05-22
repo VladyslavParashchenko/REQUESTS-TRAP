@@ -1,6 +1,7 @@
 <div class="table-container">
+  <h2>Requests with trap_id=<%= params[:trap_id] %></h2>
 <table>
-  <tr>
+  <tr class="row-header">
     <th class="min-50">Query params</th>
     <th class="min-50">Query string</th>
     <th>Cookies</th>
@@ -10,17 +11,8 @@
     <th>Remote ip</th>
     <th>Request date</th>
   </tr>
-  <% @requests.each do |app_request| %>
-  <tr>
-    <td><%= app_request.query_params %></td>
-    <td><%= app_request.query_string %></td>
-    <td><%= app_request.cookies %></td>
-    <td><%= app_request.headers %></td>
-    <td><%= app_request.scheme_request %></td>
-    <td><%= app_request.request_method %></td>
-    <td><%= app_request.remote_ip %></td>
-    <td><%= app_request.request_date %></td>
-  </tr>
+  <% @requests.each do |app| %>
+      <%= render "table_row", {app_request:app} %>
   <% end %>
 </table>
 </div>

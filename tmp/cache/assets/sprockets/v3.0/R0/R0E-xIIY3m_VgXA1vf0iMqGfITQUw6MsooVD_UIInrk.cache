@@ -1,0 +1,7 @@
+I"m(function() {
+  App.cable.subscriptions.create({
+    channel: "WebRequestChannel"
+  });
+
+}).call(this);
+:ET
