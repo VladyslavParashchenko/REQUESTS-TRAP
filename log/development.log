@@ -13002,3 +13002,582 @@ Unable to process RequestsChannel#update
 Completed 200 OK in 72ms (Views: 37.9ms | ActiveRecord: 20.2ms)
 
 
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:16:15 +0300
+RequestsChannel stopped streaming from rtest
+Started GET "/" for 127.0.0.1 at 2018-05-22 19:26:08 +0300
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 339ms (Views: 302.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:26:09 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:26:09 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mkd" for 127.0.0.1 at 2018-05-22 19:26:16 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mkd"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:26:16.705590"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mkd"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mkd\"}"], ["cookies", "{\"_requests_trap_session\":\"IisNK4wwFSiFPObp3oaMFE6+v2btk1AkpOGcznO0vMLCYgjEf0w47r/M9Jsv+elMjXQOoh4nUPw++UBKziLKx2z0vmTQXp76++wrm3+DJGTiL+BWsKt0fb2llcytM6N7L+N8KPyeeh7ReYNJseg=--bw45/fUrF7vGeEUV--g2vETK+rcEy77PY05F96MA==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mkd"], ["created_at", "2018-05-22 16:26:16.706355"], ["updated_at", "2018-05-22 16:26:16.706355"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.7ms)
+[ActionCable] Broadcasting to rmkd: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mkd&quot;}</td>\n  <td>/mkd</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;IisNK4wwFSiFPObp3oaMFE6+v2btk1AkpOGcznO0vMLCYgjEf0w47r/M9Jsv+elMjXQOoh4nUPw++UBKziLKx2z0vmTQXp76++wrm3+DJGTiL+BWsKt0fb2llcytM6N7L+N8KPyeeh7ReYNJseg=--bw45/fUrF7vGeEUV--g2vETK+rcEy77PY05F96MA==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:26:16 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 380ms (Views: 47.3ms | ActiveRecord: 124.3ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:26:16 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:26:16 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:26:16 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:26:28 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (1.3ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/show_requests.html.erb within layouts/application (94.6ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (comparison of Fixnum with String failed):
+    16:   <% end %>
+    17:   <% if @requests.length>%>
+    18:   <h3>Requests not found</h3>
+    19:     <% end %>
+    20: </table>
+    21: </div>
+  
+app/views/main/show_requests.html.erb:19:in `>'
+app/views/main/show_requests.html.erb:19:in `_app_views_main_show_requests_html_erb__659370347763640301_70049426410420'
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:26:29 +0300
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:26:43 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/show_requests.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:26:43 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:26:43 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from rmkd2
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:27:48 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/show_requests.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:27:48 +0300
+RequestsChannel stopped streaming from rmkd2
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:27:48 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:27:48 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from rmkd2
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:28:30 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/show_requests.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:28:30 +0300
+RequestsChannel stopped streaming from rmkd2
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:28:31 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:28:31 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from rmkd2
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:29:51 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.5ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/show_requests.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 2200ms (Views: 2197.9ms | ActiveRecord: 0.5ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:29:53 +0300
+RequestsChannel stopped streaming from rmkd2
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:29:54 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:29:54 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from rmkd2
+Started DELETE "/mkd2" for 127.0.0.1 at 2018-05-22 19:30:08 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"mkd2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:30:08.979158"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/mkd2"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mkd2\"}"], ["cookies", "{\"_requests_trap_session\":\"wLbod+zhMRTnm5i7LmaAT8OxEjiydvf9Fr4+7vrDh8G5CaTX7uDXA+NWMv39nTImeG6cdLpo7vflxIGVe/W0JfNNE0wWK+2hl7KYwO8pN5ZuVQ7irMUKxQgNHVnZoXmHhTdoLK2E69KTTt/To2o=--31I51R74+Im2f7iv--0GdBr8LDlF0ReSPunCV+RQ==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mkd2"], ["created_at", "2018-05-22 16:30:08.980000"], ["updated_at", "2018-05-22 16:30:08.980000"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (80.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.8ms)
+[ActionCable] Broadcasting to rmkd2: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mkd2&quot;}</td>\n  <td>/mkd2</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;wLbod+zhMRTnm5i7LmaAT8OxEjiydvf9Fr4+7vrDh8G5CaTX7uDXA+NWMv39nTImeG6cdLpo7vflxIGVe/W0JfNNE0wWK+2hl7KYwO8pN5ZuVQ7irMUKxQgNHVnZoXmHhTdoLK2E69KTTt/To2o=--31I51R74+Im2f7iv--0GdBr8LDlF0ReSPunCV+RQ==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>DELETE</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:30:08 UTC</td>\n</tr>"
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mkd2&quot;}</td>\n  <td>/mkd2</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;wLbod+zhMRTnm5i7LmaAT8OxEjiydvf9Fr4+7vrDh8G5CaTX7uDXA+NWMv39nTImeG6cdLpo7vflxIGVe/W0JfNNE... (via streamed from rmkd2)
+Unable to process RequestsChannel#update
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 140ms (Views: 29.8ms | ActiveRecord: 81.1ms)
+
+
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:30:48 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.9ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (0.8ms)
+  Rendered main/show_requests.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.9ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:30:48 +0300
+RequestsChannel stopped streaming from rmkd2
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:30:48 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:30:48 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from rmkd2
+Started GET "/mkd2" for 127.0.0.1 at 2018-05-22 19:30:53 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:30:53.945840"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mkd2"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mkd2\"}"], ["cookies", "{\"_requests_trap_session\":\"uEjVbXUXoVnn1LAcjCcz1cn4WZkkjz3WJ7o+2u7r9yW0RmyOX/OLnDo7QoX+nHiYe7zTADgD2BeGwNg3stYKS0v3wX/iPHstf1IQcav6qSLpVdPBu59zV8Zzqsx1ZQ5iSUNSv8ZZYzSnRcFMJec=--w2lfjQ53gyZn6Vur--PER6sa3mP0CjJHr5LqLUlg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mkd2"], ["created_at", "2018-05-22 16:30:53.946946"], ["updated_at", "2018-05-22 16:30:53.946946"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (29.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.0ms)
+[ActionCable] Broadcasting to rmkd2: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mkd2&quot;}</td>\n  <td>/mkd2</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;uEjVbXUXoVnn1LAcjCcz1cn4WZkkjz3WJ7o+2u7r9yW0RmyOX/OLnDo7QoX+nHiYe7zTADgD2BeGwNg3stYKS0v3wX/iPHstf1IQcav6qSLpVdPBu59zV8Zzqsx1ZQ5iSUNSv8ZZYzSnRcFMJec=--w2lfjQ53gyZn6Vur--PER6sa3mP0CjJHr5LqLUlg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:30:53 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.7ms)
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mkd2&quot;}</td>\n  <td>/mkd2</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;uEjVbXUXoVnn1LAcjCcz1cn4WZkkjz3WJ7o+2u7r9yW0RmyOX/OLnDo7QoX+nHiYe7zTADgD2BeGwNg3stYKS0v3w... (via streamed from rmkd2)
+Completed 200 OK in 62ms (Views: 24.7ms | ActiveRecord: 30.0ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:30:54 +0300
+RequestsChannel stopped streaming from rmkd2
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:30:54 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:30:54 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mkd2/requests" for 127.0.0.1 at 2018-05-22 19:30:56 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mkd2"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mkd2') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (1.3ms)
+  Rendered main/_table_row.html.erb (0.3ms)
+  Rendered main/show_requests.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:04 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:04.381379"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"a/AcXIpI05K/jhgBaVhTo0+aFQrwM71+Z+2/IA4pdp3mBhpuU25F4VZBi0j9Vu8NC4ByUL3+UT75Q6UQqqyZN4N0mZ2JAnciLfGTB9LmPwIX+8f2GCdFJEDC2kjlFuVPc2Eaf3pDCEHwdhVH3Rc=--rCixsqqrDhUa1Kcv--hS19EnBAaPd2L0O2CV/shw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:04.382187"], ["updated_at", "2018-05-22 16:31:04.382187"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.6ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;a/AcXIpI05K/jhgBaVhTo0+aFQrwM71+Z+2/IA4pdp3mBhpuU25F4VZBi0j9Vu8NC4ByUL3+UT75Q6UQqqyZN4N0mZ2JAnciLfGTB9LmPwIX+8f2GCdFJEDC2kjlFuVPc2Eaf3pDCEHwdhVH3Rc=--rCixsqqrDhUa1Kcv--hS19EnBAaPd2L0O2CV/shw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:04 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 17.1ms | ActiveRecord: 39.4ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:04 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:04 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:04 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4/requests" for 127.0.0.1 at 2018-05-22 19:31:10 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mk4') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (1.3ms)
+  Rendered main/show_requests.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:18 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.3ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:18.266996"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"lW++oBxO008waaJlBj2bgnUYYX5UJ5wXvfZ5TTiXhxLSmYMdnIcvwIL7NKBWc/rpSeGC83bcd3bwv2q7ERzPHI0kDf51/4Uq1JqCM60+vSkSVfVV6VSYuJ2A51zOXL0dnqLv9h1ppt6Z7cZCN3A=--UFYIe/eRWOtK0N6r--KpLWY5aMcMpK1AZrEatDrg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:18.267642"], ["updated_at", "2018-05-22 16:31:18.267642"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (43.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.7ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;lW++oBxO008waaJlBj2bgnUYYX5UJ5wXvfZ5TTiXhxLSmYMdnIcvwIL7NKBWc/rpSeGC83bcd3bwv2q7ERzPHI0kDf51/4Uq1JqCM60+vSkSVfVV6VSYuJ2A51zOXL0dnqLv9h1ppt6Z7cZCN3A=--UFYIe/eRWOtK0N6r--KpLWY5aMcMpK1AZrEatDrg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:18 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 16.7ms | ActiveRecord: 43.5ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:18 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:18 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:18 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:19 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:19.139965"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"YiK7PSK4rLa7f3ZCUR4+U/m8sF8bEyhpEjJ+OtuJ4Zx4KNNnji6tNihwXOmtKzhptw/9ZWuqyrg4fHkwIirVF0MwJ9jg6HxaZyL/OAwZfoZUEfV01lxGqCdeOsxMGz8SeNJnrJCeawgO3Mlan8I=--awFJYH5GNj93zvJP--bN/ip+MOOHnT6UcLnk+zwA==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:19.140644"], ["updated_at", "2018-05-22 16:31:19.140644"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.4ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;YiK7PSK4rLa7f3ZCUR4+U/m8sF8bEyhpEjJ+OtuJ4Zx4KNNnji6tNihwXOmtKzhptw/9ZWuqyrg4fHkwIirVF0MwJ9jg6HxaZyL/OAwZfoZUEfV01lxGqCdeOsxMGz8SeNJnrJCeawgO3Mlan8I=--awFJYH5GNj93zvJP--bN/ip+MOOHnT6UcLnk+zwA==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:19 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 20.6ms | ActiveRecord: 18.2ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:19 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:19 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:19 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:19 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:19.877949"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"AMB3fSekGfb5K1uRi2YrgRFqrNDOHKEEzOeyknM2+CHBZesBIFSp0iDt8QVcpX2KvlmRRRnCMkEQ54tR88XH6w923KRlnWm/dzGmMRlEHTTJyBdLAFnfXI2O8R9eq4yS/LigVnC6TAqvPwvb0So=--eyaXCPdVe1kfjSg0--lsE5iuijizWGsoziAX1pKw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:19.878881"], ["updated_at", "2018-05-22 16:31:19.878881"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.0ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;AMB3fSekGfb5K1uRi2YrgRFqrNDOHKEEzOeyknM2+CHBZesBIFSp0iDt8QVcpX2KvlmRRRnCMkEQ54tR88XH6w923KRlnWm/dzGmMRlEHTTJyBdLAFnfXI2O8R9eq4yS/LigVnC6TAqvPwvb0So=--eyaXCPdVe1kfjSg0--lsE5iuijizWGsoziAX1pKw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:19 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 31.4ms | ActiveRecord: 16.3ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:19 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:20 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:20 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:20 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.3ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:20.578772"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"3Y7hr2y2eqR94+BQw0HJMoYVQj+8gkuKb+9M11fp4gYmbZFKH2tArO534HBqVMu2whcSS4Lo+WiNfK1XLjAFr0/Fs3ZKBVfIXk5LhEpZrUbcjb4F6lXAtPZGUnxILP1tpvAbFmTqXPXinU02SFs=--xiVH2YPf2qqF7L3w--tL2h+kl47GtZBMwBMnJtrw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:20.579402"], ["updated_at", "2018-05-22 16:31:20.579402"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.9ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;3Y7hr2y2eqR94+BQw0HJMoYVQj+8gkuKb+9M11fp4gYmbZFKH2tArO534HBqVMu2whcSS4Lo+WiNfK1XLjAFr0/Fs3ZKBVfIXk5LhEpZrUbcjb4F6lXAtPZGUnxILP1tpvAbFmTqXPXinU02SFs=--xiVH2YPf2qqF7L3w--tL2h+kl47GtZBMwBMnJtrw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:20 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 23.2ms | ActiveRecord: 20.9ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:20 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:20 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:20 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:21.204623"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"dO1NbneihTe/zhJoLEIiMUGEyEHiN4TenhXQerpUFThV2rjytusgjLsaTdHwzmRLzdGt5MqvqvMxQATb9HvB9AZWKYhDu/aQHIeq2nBUV6YdAl1n1T051UMBc/qJwTMaKvgMVr/7tWGCFCwogTY=--y3QfgY6GkDBJO2DD--9v/LokCtWOHTynszxIsZXQ==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:21.205436"], ["updated_at", "2018-05-22 16:31:21.205436"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.8ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;dO1NbneihTe/zhJoLEIiMUGEyEHiN4TenhXQerpUFThV2rjytusgjLsaTdHwzmRLzdGt5MqvqvMxQATb9HvB9AZWKYhDu/aQHIeq2nBUV6YdAl1n1T051UMBc/qJwTMaKvgMVr/7tWGCFCwogTY=--y3QfgY6GkDBJO2DD--9v/LokCtWOHTynszxIsZXQ==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:21 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 19.9ms | ActiveRecord: 11.3ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.7ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:21.736469"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"FX4zDd6ErUCg+s/9rL75MHYoqzccT0l9T4Y5UnKw+p1rflG4AZ+m0k4duSTsV53SfCQPfq6M8oey3cKuu+4J+hiIlEF4NrohxA0heHRHLORnbJt85YivIsVrA+1WHMm0NvHuYUFGQn+6Oy+g/h8=--xt2fS6HssnIKQsnE--DK2bkCPVsv1mqwzNjwZafw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:21.737279"], ["updated_at", "2018-05-22 16:31:21.737279"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.7ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;FX4zDd6ErUCg+s/9rL75MHYoqzccT0l9T4Y5UnKw+p1rflG4AZ+m0k4duSTsV53SfCQPfq6M8oey3cKuu+4J+hiIlEF4NrohxA0heHRHLORnbJt85YivIsVrA+1WHMm0NvHuYUFGQn+6Oy+g/h8=--xt2fS6HssnIKQsnE--DK2bkCPVsv1mqwzNjwZafw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:21 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 18.5ms | ActiveRecord: 7.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:21 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.4ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:22.240322"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"pqhjZtvfXSHmv1ynhA8aR5S2fk3uKNtKeyPS3rfDVjrLAZFYjHoqnCVUSKAZUHWXpAV/o1UkQQa4bwz4GdEF+oFMondjbw5N1ukXqcC8zxkkwP5bJAG+o8G1Bzg9PjEp06l9OGDYsTEMIr+7ycs=--bfNYJpiFTpB8U/+/--N/XkNtkrCa/C7MvxaYKYrA==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:22.241091"], ["updated_at", "2018-05-22 16:31:22.241091"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.8ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;pqhjZtvfXSHmv1ynhA8aR5S2fk3uKNtKeyPS3rfDVjrLAZFYjHoqnCVUSKAZUHWXpAV/o1UkQQa4bwz4GdEF+oFMondjbw5N1ukXqcC8zxkkwP5bJAG+o8G1Bzg9PjEp06l9OGDYsTEMIr+7ycs=--bfNYJpiFTpB8U/+/--N/XkNtkrCa/C7MvxaYKYrA==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:22 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 18.8ms | ActiveRecord: 9.8ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.3ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:22.491734"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"X00rcMKY7RUIdKL4SkfbuA4cCXhTPYpLuZ+OztUCB9E7C9+vFTkUaKNdWlJ/IJRaW3JonW8QTNSKdw3cs5RPabiCl4RYrW7yB2YxWDalL+eG/aOHWOI4UDaxBL6Vy030zQ6NBD/mEPM7XF3OKPQ=--F8FT3Z3OaoA6sLgj--PQ1PjzMSz0Me++Hqn4Cp3A==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:22.492279"], ["updated_at", "2018-05-22 16:31:22.492279"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.6ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;X00rcMKY7RUIdKL4SkfbuA4cCXhTPYpLuZ+OztUCB9E7C9+vFTkUaKNdWlJ/IJRaW3JonW8QTNSKdw3cs5RPabiCl4RYrW7yB2YxWDalL+eG/aOHWOI4UDaxBL6Vy030zQ6NBD/mEPM7XF3OKPQ=--F8FT3Z3OaoA6sLgj--PQ1PjzMSz0Me++Hqn4Cp3A==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:22 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 44ms (Views: 27.2ms | ActiveRecord: 12.0ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.3ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:22.835587"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"PK6LhI8UMhnqxRnuY6C748g7v5jHYDzKL1SVra0GeSt5WqaJvrQK/vKJsNGsfYNHOfXF1panyPhJXzRi0mEHarCWs316F92Ve8WZdeyksvQTnszHWrYfpnt1PETVH9OLf/rE5mUI1rp3DtWH5ao=--5pu6+881ciRneWpq--C+nrnSDPS3x5iKtZnTCm2g==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:22.836226"], ["updated_at", "2018-05-22 16:31:22.836226"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.6ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;PK6LhI8UMhnqxRnuY6C748g7v5jHYDzKL1SVra0GeSt5WqaJvrQK/vKJsNGsfYNHOfXF1panyPhJXzRi0mEHarCWs316F92Ve8WZdeyksvQTnszHWrYfpnt1PETVH9OLf/rE5mUI1rp3DtWH5ao=--5pu6+881ciRneWpq--C+nrnSDPS3x5iKtZnTCm2g==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:22 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 24.6ms | ActiveRecord: 9.1ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:22 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:23.279294"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"oMV1oLmtNbtxB0s3mMYi3mJ5HQwQsZjuJaQJ+08wZNKpEOBrcMe/Mmu9SgHTunqrmpS7UaJd1fjFGtpzVXSKYps3PgweeGQXbfCbIsGCf73u1mKcjxvJEfYchxRoLI2w3SKoQMkqLdfV2LwfcBQ=--ZX/rSBK8lz0HYSki--XUxWC7r6u64v+aDzeM0Bgw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:23.280137"], ["updated_at", "2018-05-22 16:31:23.280137"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.9ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;oMV1oLmtNbtxB0s3mMYi3mJ5HQwQsZjuJaQJ+08wZNKpEOBrcMe/Mmu9SgHTunqrmpS7UaJd1fjFGtpzVXSKYps3PgweeGQXbfCbIsGCf73u1mKcjxvJEfYchxRoLI2w3SKoQMkqLdfV2LwfcBQ=--ZX/rSBK8lz0HYSki--XUxWC7r6u64v+aDzeM0Bgw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:23 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 23.7ms | ActiveRecord: 27.2ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk4" for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk4"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:23.747509"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk4\"}"], ["cookies", "{\"_requests_trap_session\":\"jMr3NIEARxmWHTFrvVgehJAQKK7eRXqVb9of6t1mb+cqSay4J9Gc0eSVZkjgOCD/PIaIMAxWSagy4ujIobDMSmCAGamG5NtERBD6f9owF8R9QRwzRnKlLKCKEZR86XsPBYbWfMGrdhKQYrfMVN4=--R/pTDS1ZSjS1cG8v--RDzov/hoHmb49xwd8qWnMg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk4"], ["created_at", "2018-05-22 16:31:23.748917"], ["updated_at", "2018-05-22 16:31:23.748917"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.8ms)
+[ActionCable] Broadcasting to rmk4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk4&quot;}</td>\n  <td>/mk4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;jMr3NIEARxmWHTFrvVgehJAQKK7eRXqVb9of6t1mb+cqSay4J9Gc0eSVZkjgOCD/PIaIMAxWSagy4ujIobDMSmCAGamG5NtERBD6f9owF8R9QRwzRnKlLKCKEZR86XsPBYbWfMGrdhKQYrfMVN4=--R/pTDS1ZSjS1cG8v--RDzov/hoHmb49xwd8qWnMg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:23 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 23.0ms | ActiveRecord: 9.4ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:23 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk145" for 127.0.0.1 at 2018-05-22 19:31:27 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk145"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:27.367758"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk145"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk145\"}"], ["cookies", "{\"_requests_trap_session\":\"Mp0QBtP73YM+EOaLPRwiKY+HPEoYt9rCV3ok+SpXLDzlxT9T3GVlnfF9H6Lh2IqZWbiOAo6rSC2d5334HpZbxW9RyBM50PxAJa/bLeSRVZD0cWZrQ7sXikChH3L2aU9mKVOPGXgYSzFvstkG2Io=--0yw1Vs2KhfOaEoKG--0vYIk6Q9t986Li3jciSTGg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk145"], ["created_at", "2018-05-22 16:31:27.368526"], ["updated_at", "2018-05-22 16:31:27.368526"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.2ms)
+[ActionCable] Broadcasting to rmk145: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk145&quot;}</td>\n  <td>/mk145</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;Mp0QBtP73YM+EOaLPRwiKY+HPEoYt9rCV3ok+SpXLDzlxT9T3GVlnfF9H6Lh2IqZWbiOAo6rSC2d5334HpZbxW9RyBM50PxAJa/bLeSRVZD0cWZrQ7sXikChH3L2aU9mKVOPGXgYSzFvstkG2Io=--0yw1Vs2KhfOaEoKG--0vYIk6Q9t986Li3jciSTGg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:27 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 24.4ms | ActiveRecord: 33.9ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:27 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:27 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:27 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk145" for 127.0.0.1 at 2018-05-22 19:31:28 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk145"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:28.374013"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk145"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk145\"}"], ["cookies", "{\"_requests_trap_session\":\"hjkNfUj9xOqHENhviUit/6V+UOFjXF6YqG+FvNczIdhgLsWudk/Ew47U54Pw4oWKrIjPRR5X8auJo2RTGCM3cj7XHHLcmnS42Xqo4IuOBFYwerKKCBAwQIhiXpcB2CN26K2xzUiqTNSwkjMDTBw=--uOg1PZdcmDp5lElv--iPW7o99DPX0PfbPINZBrXQ==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk145"], ["created_at", "2018-05-22 16:31:28.374929"], ["updated_at", "2018-05-22 16:31:28.374929"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.2ms)
+[ActionCable] Broadcasting to rmk145: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk145&quot;}</td>\n  <td>/mk145</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;hjkNfUj9xOqHENhviUit/6V+UOFjXF6YqG+FvNczIdhgLsWudk/Ew47U54Pw4oWKrIjPRR5X8auJo2RTGCM3cj7XHHLcmnS42Xqo4IuOBFYwerKKCBAwQIhiXpcB2CN26K2xzUiqTNSwkjMDTBw=--uOg1PZdcmDp5lElv--iPW7o99DPX0PfbPINZBrXQ==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:28 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 57ms (Views: 21.1ms | ActiveRecord: 28.8ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:28 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:28 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:28 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk145" for 127.0.0.1 at 2018-05-22 19:31:28 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk145"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:28.957460"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk145"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk145\"}"], ["cookies", "{\"_requests_trap_session\":\"85olPYRngUZH57KtHJchQAGa3G07z9Akr7zd0/ua14TlgDkxGdm8w/MveKh6Z/6fXH9z3qU+GEjf/jEx31jqB+We05UOVEFl+KG/nYn7d0wLFE4UdweIWKjx+grrnEw5BvmpBOuywrYzYdcMdZw=--H3r49wCDB0vWJ3UV--ynd11rOs146lrPDDkza2uQ==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk145"], ["created_at", "2018-05-22 16:31:28.958490"], ["updated_at", "2018-05-22 16:31:28.958490"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.9ms)
+[ActionCable] Broadcasting to rmk145: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk145&quot;}</td>\n  <td>/mk145</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;85olPYRngUZH57KtHJchQAGa3G07z9Akr7zd0/ua14TlgDkxGdm8w/MveKh6Z/6fXH9z3qU+GEjf/jEx31jqB+We05UOVEFl+KG/nYn7d0wLFE4UdweIWKjx+grrnEw5BvmpBOuywrYzYdcMdZw=--H3r49wCDB0vWJ3UV--ynd11rOs146lrPDDkza2uQ==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:28 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 71ms (Views: 35.2ms | ActiveRecord: 28.0ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk145" for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"mk145"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 16:31:29.558102"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/mk145"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"mk145\"}"], ["cookies", "{\"_requests_trap_session\":\"xu7TN1TK/U09b/u++c6oeo75Kdm2bmLds830a2icqd58CPestZwhZQVXNizVRlNbnUNr2rw6z9O3JUeoF1xa3H6tSGf7Yqpy6zhAVRKrpyxBU9YS7s4WzXYnLgfLfqdL4RzzytOlEqy2clHEdTs=--0Bhaxb009ouCMkQ+--8mwgO3WtHSzW6nE8KEMcjw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "mk145"], ["created_at", "2018-05-22 16:31:29.559116"], ["updated_at", "2018-05-22 16:31:29.559116"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.3ms)
+[ActionCable] Broadcasting to rmk145: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;mk145&quot;}</td>\n  <td>/mk145</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;xu7TN1TK/U09b/u++c6oeo75Kdm2bmLds830a2icqd58CPestZwhZQVXNizVRlNbnUNr2rw6z9O3JUeoF1xa3H6tSGf7Yqpy6zhAVRKrpyxBU9YS7s4WzXYnLgfLfqdL4RzzytOlEqy2clHEdTs=--0Bhaxb009ouCMkQ+--8mwgO3WtHSzW6nE8KEMcjw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 16:31:29 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 23.7ms | ActiveRecord: 10.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:29 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/ruby/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/mk145/requests" for 127.0.0.1 at 2018-05-22 19:31:31 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"mk145"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = 'mk145') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (1.4ms)
+  Rendered main/_table_row.html.erb (0.3ms)
+  Rendered main/_table_row.html.erb (0.3ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/show_requests.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:58 +0300

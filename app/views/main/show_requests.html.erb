@@ -15,4 +15,7 @@
       <%= render "table_row", {app_request:app} %>
   <% end %>
 </table>
+  <% if @requests.length == 0 %>
+    <h3 class="not-found">Requests not found</h3>
+  <% end %>
 </div>

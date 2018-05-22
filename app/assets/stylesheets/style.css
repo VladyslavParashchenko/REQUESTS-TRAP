@@ -63,3 +63,6 @@ a:link,a:active,a:visited,a:hover {
 h2{
     text-align: center;
 }
+h3.not-found{
+    text-align: center;
+}
