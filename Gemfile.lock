@@ -203,7 +203,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.0)
-  redis
+  redis (~> 4.0)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring

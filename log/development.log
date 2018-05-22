@@ -13581,3 +13581,101 @@ Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.7ms)
 
 
 Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 19:31:58 +0300
+Started GET "/" for 127.0.0.1 at 2018-05-22 20:36:41 +0300
+  [1m[35m (40.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 814ms (Views: 806.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:36:43 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:36:44 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/45" for 127.0.0.1 at 2018-05-22 20:36:47 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"45"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 17:36:48.035625"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"U0zLyTjpdK3UF/indYI50qcTGSo3eIkijIfNGOASjc8BNE0HvIR/G6sl2qwsXeGDOaRD8+CuIvkqxW0IT7qgCwJL2t8iBsy08PKJzGFyxxJZTmVozV46m9eZkY6mzoW47W58O++SJxdlFqPoh9o=--EarUM8Y/eIPvtENw--+i0yUzc5GP0tAO8DnTUvwA==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-22 17:36:48.036613"], ["updated_at", "2018-05-22 17:36:48.036613"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (239.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.9ms)
+[ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;U0zLyTjpdK3UF/indYI50qcTGSo3eIkijIfNGOASjc8BNE0HvIR/G6sl2qwsXeGDOaRD8+CuIvkqxW0IT7qgCwJL2t8iBsy08PKJzGFyxxJZTmVozV46m9eZkY6mzoW47W58O++SJxdlFqPoh9o=--EarUM8Y/eIPvtENw--+i0yUzc5GP0tAO8DnTUvwA==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 17:36:48 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 401ms (Views: 24.8ms | ActiveRecord: 246.9ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:36:48 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:36:48 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:36:48 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/4222/requests" for 127.0.0.1 at 2018-05-22 20:37:00 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"4222"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (1.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4222') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/show_requests.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 1.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:00 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:37:00 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:00 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r4222
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:09 +0300
+RequestsChannel stopped streaming from r4222
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:37:09 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:09 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/4222" for 127.0.0.1 at 2018-05-22 20:37:15 +0300
+Processing by MainController#save_request as HTML
+  Parameters: {"trap_id"=>"4222"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-22 17:37:15.806333"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/4222"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"4222\"}"], ["cookies", "{\"_requests_trap_session\":\"ARYqiACpVQoqkKOQMJVzTC/CZAN7GlvwV4uFaacGPzMPiEefl21WxWHbdaBRvpdV2Yd/OvPtD6ntX/oGQnP8bkaNtnSbIV0lM0wkN3nbt0ba0OipivIIty/lD8YglAj3SDE8hglMEtgO00wMm3k=--P+Nsky4iX5W5KN2K--xNuoEUvaByS9SrPsn6AB1Q==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "4222"], ["created_at", "2018-05-22 17:37:15.806983"], ["updated_at", "2018-05-22 17:37:15.806983"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.9ms)
+[ActionCable] Broadcasting to r4222: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4222&quot;}</td>\n  <td>/4222</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;ARYqiACpVQoqkKOQMJVzTC/CZAN7GlvwV4uFaacGPzMPiEefl21WxWHbdaBRvpdV2Yd/OvPtD6ntX/oGQnP8bkaNtnSbIV0lM0wkN3nbt0ba0OipivIIty/lD8YglAj3SDE8hglMEtgO00wMm3k=--P+Nsky4iX5W5KN2K--xNuoEUvaByS9SrPsn6AB1Q==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-22 17:37:15 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 78ms (Views: 33.6ms | ActiveRecord: 37.8ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:15 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:37:16 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:16 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/4222/requests" for 127.0.0.1 at 2018-05-22 20:37:22 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"4222"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (1.2ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4222') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (2.3ms)
+  Rendered main/show_requests.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 83ms (Views: 79.2ms | ActiveRecord: 1.2ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:22 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:37:22 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:37:22 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r4222
