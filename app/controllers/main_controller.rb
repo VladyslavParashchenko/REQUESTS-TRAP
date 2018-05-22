@@ -21,7 +21,7 @@ class MainController < ApplicationController
       rendered_row = render_to_string'_table_row', locals: {app_request:rqst}, layout:false
       ActionCable.server.broadcast('r'+params[:trap_id], rendered_row)
     else
-      render 'main/request_not_save', 500
+      render 'main/request_not_save'
     end
   end
 
