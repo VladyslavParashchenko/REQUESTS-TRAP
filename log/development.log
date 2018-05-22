@@ -13679,3 +13679,22 @@ Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrad
 Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
 RequestsChannel is transmitting the subscription confirmation
 RequestsChannel is streaming from r4222
+Started GET "/4222/requests" for 127.0.0.1 at 2018-05-22 20:41:32 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"4222"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.8ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4222') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (1.0ms)
+  Rendered main/show_requests.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.8ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:41:32 +0300
+RequestsChannel stopped streaming from r4222
+Started GET "/cable" for 127.0.0.1 at 2018-05-22 20:41:33 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 20:41:33 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r4222
