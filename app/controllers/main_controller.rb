@@ -19,9 +19,9 @@ class MainController < ApplicationController
     rqst.query_params = params.to_json
     if rqst.save
       rendered_row = render_to_string'_table_row', locals: {app_request:rqst}, layout:false
-      #ActionCable.server.broadcast('r'+params[:trap_id], rendered_row)
+      ActionCable.server.broadcast('r'+params[:trap_id], rendered_row)
     else
-      render 'main/request_not_save'
+      render 'main/request_not_save', response_code:500
     end
   end
 

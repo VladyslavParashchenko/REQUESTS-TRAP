@@ -1,0 +1,25 @@
+I"ñ(function() {
+  window.onload = function() {
+    if (document.querySelector('.table-container') !== null) {
+      return App.requests = App.cable.subscriptions.create({
+        channel: "RequestsChannel",
+        trap_id: window.location.href.split('/')[3]
+      }, {
+        connected: function() {},
+        disconnected: function() {},
+        received: function(data) {
+          document.querySelector('table .row-header').insertAdjacentHTML('afterEnd', data);
+          if (document.querySelector('h3.not-found') !== null) {
+            document.querySelector('h3.not-found').remove();
+          }
+          ({
+            update: function() {}
+          });
+          return this.perform('update');
+        }
+      });
+    }
+  };
+
+}).call(this);
+:ET

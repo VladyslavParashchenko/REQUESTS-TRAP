@@ -7,7 +7,8 @@ window.onload =->
 
     received: (data) ->
       document.querySelector('table .row-header').insertAdjacentHTML('afterEnd',data)
-      document.querySelector('h3.not-found').remove();
+      if document.querySelector('h3.not-found') !=null
+        document.querySelector('h3.not-found').remove()
 
       update: ->
       @perform 'update'

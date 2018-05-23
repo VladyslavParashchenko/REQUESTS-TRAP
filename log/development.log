@@ -13847,3 +13847,248 @@ Started GET "/cable" for 127.0.0.1 at 2018-05-22 21:45:28 +0300
 Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-22 21:45:28 +0300
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/" for 127.0.0.1 at 2018-05-23 09:29:19 +0300
+  [1m[35m (37.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by MainController#index as HTML
+  Rendering main/index.html.erb within layouts/application
+  Rendered main/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 740ms (Views: 732.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-05-23 09:29:20 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:29:20 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+Started GET "/32/requests" for 127.0.0.1 at 2018-05-23 09:29:30 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"32"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (2.4ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '32') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (0.7ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/show_requests.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 57ms (Views: 44.0ms | ActiveRecord: 9.3ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:29:30 +0300
+Started GET "/cable" for 127.0.0.1 at 2018-05-23 09:29:30 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:29:30 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r32
+Started DELETE "/32" for 127.0.0.1 at 2018-05-23 09:30:23 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:30:23.475453"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:30:23.476457"], ["updated_at", "2018-05-23 06:30:23.476457"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.6ms)
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 61ms (Views: 33.2ms | ActiveRecord: 15.9ms)
+
+
+Started DELETE "/32" for 127.0.0.1 at 2018-05-23 09:30:24 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.4ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:30:24.535191"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"K9hOO2i3GJmlVqQtKCWAy7R1s1oDW/dgEej+jNWrYSHzcsmKJl00oZ1y71/gSnALkL+Gl7jnKXNrLcPHk0hXMJ67zlvqC82c5ek3JhFCagdVXRIN0Xz6m45Cye5f/LNdg6YOTrLGdKU/bgFjxbg=--DDHGEJZdonyl4MHA--Vi9v1DwNfEkweVpIYjc6nw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:30:24.536299"], ["updated_at", "2018-05-23 06:30:24.536299"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.4ms)
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 79ms (Views: 39.5ms | ActiveRecord: 12.3ms)
+
+
+Started DELETE "/32" for 127.0.0.1 at 2018-05-23 09:30:25 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.4ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:30:25.279294"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"tl9WR81KehN2Krs4OqLtBsovCHq/fzBtoil76HVT84dGTzTuJy+4TW7buukd6pJt4udJAfsFk0XcxV8NBWLyAIg2VnnCWdR6kFcI/N+XKGrvoLFv3Fplg559hEP6515yhkxcjeuj2KIbGTdewOE=--47yLzSOsGN0X4Ies--mAGiup2fg/JuzqYAnSNVgw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:30:25.280668"], ["updated_at", "2018-05-23 06:30:25.280668"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.1ms)
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 69ms (Views: 37.7ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/32/requests" for 127.0.0.1 at 2018-05-23 09:30:44 +0300
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"32"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (0.8ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '32') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (1.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.6ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.6ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/show_requests.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.8ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:30:44 +0300
+RequestsChannel stopped streaming from r32
+Started GET "/cable" for 127.0.0.1 at 2018-05-23 09:30:44 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:30:44 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r32
+Started GET "/32/requests" for 127.0.0.1 at 2018-05-23 09:31:18 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by MainController#show_requests as HTML
+  Parameters: {"trap_id"=>"32"}
+  Rendering main/show_requests.html.erb within layouts/application
+  [1m[36mRequestModel Load (1.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '32') ORDER BY request_date desc[0m
+  ↳ app/views/main/show_requests.html.erb:14
+  Rendered main/_table_row.html.erb (0.9ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.3ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.2ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/_table_row.html.erb (0.1ms)
+  Rendered main/show_requests.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 256ms (Views: 240.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-05-23 09:31:19 +0300
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:31:19 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r32
+Started DELETE "/32" for 127.0.0.1 at 2018-05-23 09:31:22 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:31:22.070971"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"WaiQlylFzQQocACT42rMPobAr08VT5FibOtC03OG/8ar+9fGd6bgaodCetXgobm3I5LjGnMn1oiSY03AKKV7AIM3gFKrvLtaTdv8Q2z9vaKZ/YSvKgBYIhKbirnmZ2aTqvvN5Km7WSK+dSoHeug=--yNyDm8qtVJMpdeIw--E2ilkenpAhwRKSOGxpJ21A==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:31:22.071974"], ["updated_at", "2018-05-23 06:31:22.071974"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (49.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.8ms)
+[ActionCable] Broadcasting to r32: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;WaiQlylFzQQocACT42rMPobAr08VT5FibOtC03OG/8ar+9fGd6bgaodCetXgobm3I5LjGnMn1oiSY03AKKV7AIM3gFKrvLtaTdv8Q2z9vaKZ/YSvKgBYIhKbirnmZ2aTqvvN5Km7WSK+dSoHeug=--yNyDm8qtVJMpdeIw--E2ilkenpAhwRKSOGxpJ21A==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>DELETE</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-23 06:31:22 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.7ms)
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;WaiQlylFzQQocACT42rMPobAr08VT5FibOtC03OG/8ar+9fGd6bgaodCetXgobm3I5LjGnMn1oiSY03AKKV7AIM3gFKrv... (via streamed from r32)
+Completed 200 OK in 89ms (Views: 25.7ms | ActiveRecord: 50.2ms)
+
+
+Started DELETE "/32" for 127.0.0.1 at 2018-05-23 09:31:23 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:31:23.668747"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"/sLlzWWEds4NNNv/1bSl8gEy9d9Ts5NNDl/PO0h8kkcgH5m9On3hvTD3S9teAcs46RE9Vskr4m3Ty+Du7AH7iUHOlLr29GuJ94E0XfuJtRjxDBizEEfT4aNCbuv+D+G7j+xakFhQTs+yQSUt/88=--Egv+uR6fvpdlF4fp--IL7KmhU5wKdr5444zMcQow==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:31:23.670058"], ["updated_at", "2018-05-23 06:31:23.670058"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (0.7ms)
+[ActionCable] Broadcasting to r32: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;/sLlzWWEds4NNNv/1bSl8gEy9d9Ts5NNDl/PO0h8kkcgH5m9On3hvTD3S9teAcs46RE9Vskr4m3Ty+Du7AH7iUHOlLr29GuJ94E0XfuJtRjxDBizEEfT4aNCbuv+D+G7j+xakFhQTs+yQSUt/88=--Egv+uR6fvpdlF4fp--IL7KmhU5wKdr5444zMcQow==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>DELETE</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-23 06:31:23 UTC</td>\n</tr>"
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;/sLlzWWEds4NNNv/1bSl8gEy9d9Ts5NNDl/PO0h8kkcgH5m9On3hvTD3S9teAcs46RE9Vskr4m3Ty+Du7AH7iUHOlLr29... (via streamed from r32)
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 32.5ms | ActiveRecord: 12.9ms)
+
+
+Started DELETE "/32" for 127.0.0.1 at 2018-05-23 09:31:24 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.4ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:31:24.680814"], ["remote_ip", "127.0.0.1"], ["request_method", "DELETE"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"DhV0NMBrhrPLVdbzOsuO6uCqe2XaNj4wUtrnH6Wgu4OBUGuRjLyWECClKAiAS+gCIRcG+VLjxElAgtoXINQsgJgmhMPkx2Jr6fsUfxggfiPxa/XrkWzXErn8fAlocyaBFJ/vbIgNJuKJO7J99b4=--nMRT8zPWiIOPDeW6--e6StUllpNT8nkyAXd5MaIA==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:31:24.681512"], ["updated_at", "2018-05-23 06:31:24.681512"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.1ms)
+[ActionCable] Broadcasting to r32: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;DhV0NMBrhrPLVdbzOsuO6uCqe2XaNj4wUtrnH6Wgu4OBUGuRjLyWECClKAiAS+gCIRcG+VLjxElAgtoXINQsgJgmhMPkx2Jr6fsUfxggfiPxa/XrkWzXErn8fAlocyaBFJ/vbIgNJuKJO7J99b4=--nMRT8zPWiIOPDeW6--e6StUllpNT8nkyAXd5MaIA==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>DELETE</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-23 06:31:24 UTC</td>\n</tr>"
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;DhV0NMBrhrPLVdbzOsuO6uCqe2XaNj4wUtrnH6Wgu4OBUGuRjLyWECClKAiAS+gCIRcG+VLjxElAgtoXINQsgJgmhMPkx... (via streamed from r32)
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 88ms (Views: 57.4ms | ActiveRecord: 14.6ms)
+
+
+Started PUT "/32" for 127.0.0.1 at 2018-05-23 09:31:32 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (14.7ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:31:32.845869"], ["remote_ip", "127.0.0.1"], ["request_method", "PUT"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"mo3P5DJFW1zx/P6BiFNnCAmLi917tL/11D+L0clsET3KJO+MvP9xBwxwfLeCVLVcPZSsM5bYdmc8qDm6uJfE95DMOWFCPytIOX2U7CyPAxI3aoZgFeYBBOY3Z6QXiTRTVSfZvPD5BkB/2BB8epY=--zl2kTdqDgC87j81L--9D3lNP47mdeD6eDpoucaUA==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:31:32.847212"], ["updated_at", "2018-05-23 06:31:32.847212"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.1ms)
+[ActionCable] Broadcasting to r32: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;mo3P5DJFW1zx/P6BiFNnCAmLi917tL/11D+L0clsET3KJO+MvP9xBwxwfLeCVLVcPZSsM5bYdmc8qDm6uJfE95DMOWFCPytIOX2U7CyPAxI3aoZgFeYBBOY3Z6QXiTRTVSfZvPD5BkB/2BB8epY=--zl2kTdqDgC87j81L--9D3lNP47mdeD6eDpoucaUA==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>PUT</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-23 06:31:32 UTC</td>\n</tr>"
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;mo3P5DJFW1zx/P6BiFNnCAmLi917tL/11D+L0clsET3KJO+MvP9xBwxwfLeCVLVcPZSsM5bYdmc8qDm6uJfE95DMOWFCP... (via streamed from r32)
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 80ms (Views: 37.1ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-05-23 09:31:59 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 09:31:59 +0300
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+RequestsChannel is transmitting the subscription confirmation
+RequestsChannel is streaming from r32
+Started GET "/32" for 127.0.0.1 at 2018-05-23 09:32:46 +0300
+Processing by MainController#save_request as */*
+  Parameters: {"trap_id"=>"32"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/main_controller.rb:20
+  [1m[36mRequestModel Create (0.9ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-23 06:32:46.334613"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/32"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"32\"}"], ["cookies", "{\"_requests_trap_session\":\"7sndagNGS8YvQGNgDeQHHl5zdL3LkYR5Ktm8x+rn3Q6PE1SFnO0IGDtCSIu4hWGRIr+WBhHAPeyXkw3SNi+VqoeOikCQCiZpCY1H+Hd4z+VQfyHLnd9yehsRmQDlcLwz/0A4EnEECtipGmnkML8=--CWo1ha3lVqatq2lC--Km8O2WEo9+Ch1eLcFuwwpQ==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "32"], ["created_at", "2018-05-23 06:32:46.335706"], ["updated_at", "2018-05-23 06:32:46.335706"]]
+  ↳ app/controllers/main_controller.rb:20
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/main_controller.rb:20
+  Rendering main/_table_row.html.erb
+  Rendered main/_table_row.html.erb (1.3ms)
+[ActionCable] Broadcasting to r32: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;7sndagNGS8YvQGNgDeQHHl5zdL3LkYR5Ktm8x+rn3Q6PE1SFnO0IGDtCSIu4hWGRIr+WBhHAPeyXkw3SNi+VqoeOikCQCiZpCY1H+Hd4z+VQfyHLnd9yehsRmQDlcLwz/0A4EnEECtipGmnkML8=--CWo1ha3lVqatq2lC--Km8O2WEo9+Ch1eLcFuwwpQ==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-23 06:32:46 UTC</td>\n</tr>"
+  Rendering main/save_request.html.erb within layouts/application
+  Rendered main/save_request.html.erb within layouts/application (0.5ms)
+RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;32&quot;}</td>\n  <td>/32</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;7sndagNGS8YvQGNgDeQHHl5zdL3LkYR5Ktm8x+rn3Q6PE1SFnO0IGDtCSIu4hWGRIr+WBhHAPeyXkw3SNi+VqoeOikCQC... (via streamed from r32)
+Completed 200 OK in 280ms (Views: 201.7ms | ActiveRecord: 39.9ms)
+
+
