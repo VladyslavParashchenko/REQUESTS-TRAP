@@ -7,9 +7,8 @@ class MainController < ApplicationController
   def save_request
     rqst = RequestModel.new
     rqst.trap_id = params[:trap_id]
-    rqst.headers = headers_in_json
-    rqst.cookies = cookies_in_json
-    rqst.request_date = Time.now
+    rqst.headers = headers.to_json
+    rqst.cookies = cookies.to_json
     rqst.request_method = request.scheme
     rqst.query_string = request.env[:request_uri]
     rqst.remote_ip = request.ip
@@ -21,32 +20,15 @@ class MainController < ApplicationController
       rendered_row = render_to_string'_table_row', locals: {app_request:rqst}, layout:false
       ActionCable.server.broadcast('r'+params[:trap_id], rendered_row)
     else
-      render 'main/request_not_save', response_code:500
+      render 'main/request_not_save', response_code: 500
     end
   end
 
   def show_requests
-    @requests = RequestModel.where('trap_id = ?', params[:trap_id]).order('request_date desc')
+    @requests = RequestModel.where('trap_id = ?', params[:trap_id]).order('created_at desc')
     response.set_header('TRAP_ID', params[:trap_id])
   end
 
   def show_instructions; end
 
-  private
-
-  def data_to_json(data)
-    hash = {}
-    data.each do |key, value|
-      hash[key] = value
-    end
-    hash
-  end
-
-  def headers_in_json
-    data_to_json(headers).to_json
-  end
-
-  def cookies_in_json
-    data_to_json(cookies).to_json
-  end
 end

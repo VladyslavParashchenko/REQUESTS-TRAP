@@ -3392,3 +3392,1138 @@ I, [2018-05-23T19:58:21.665073 #6363]  INFO -- : [389f689d-5c49-4efd-9b1d-4ee8f2
 I, [2018-05-23T19:58:21.665574 #6363]  INFO -- : [389f689d-5c49-4efd-9b1d-4ee8f266be14] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-23 19:58:21 +0300
 I, [2018-05-23T19:58:21.665633 #6363]  INFO -- : [389f689d-5c49-4efd-9b1d-4ee8f266be14] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 E, [2018-05-23T19:58:21.679019 #6363] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T09:41:55.767311 #12262]  INFO -- : [a93973ed-e822-43e7-a5eb-b607eb197e0d] Started GET "/" for 127.0.0.1 at 2018-05-24 09:41:55 +0300
+I, [2018-05-24T09:41:55.770616 #12262]  INFO -- : [a93973ed-e822-43e7-a5eb-b607eb197e0d] Processing by MainController#index as HTML
+I, [2018-05-24T09:41:55.815534 #12262]  INFO -- : [a93973ed-e822-43e7-a5eb-b607eb197e0d]   Rendering main/index.html.erb within layouts/application
+I, [2018-05-24T09:41:55.816826 #12262]  INFO -- : [a93973ed-e822-43e7-a5eb-b607eb197e0d]   Rendered main/index.html.erb within layouts/application (1.1ms)
+I, [2018-05-24T09:41:55.818522 #12262]  INFO -- : [a93973ed-e822-43e7-a5eb-b607eb197e0d] Completed 200 OK in 48ms (Views: 21.5ms)
+I, [2018-05-24T09:41:56.117812 #12262]  INFO -- : [3e7787d4-cc53-49cd-a556-b8e08d20001a] Started GET "/cable" for 127.0.0.1 at 2018-05-24 09:41:56 +0300
+I, [2018-05-24T09:41:56.316725 #12262]  INFO -- : [3e7787d4-cc53-49cd-a556-b8e08d20001a] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:41:56 +0300
+I, [2018-05-24T09:41:56.316879 #12262]  INFO -- : [3e7787d4-cc53-49cd-a556-b8e08d20001a] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T09:41:56.353271 #12262] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T09:41:59.361653 #12262]  INFO -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:41:59 +0300
+I, [2018-05-24T09:41:59.363055 #12262]  INFO -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:41:59.363159 #12262]  INFO -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:00.337853 #12262] DEBUG -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:00.390740 #12262] DEBUG -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   [1m[36mRequestModel Create (50.7ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:00.336663"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:00.338304"], ["updated_at", "2018-05-24 06:42:00.338304"]]
+D, [2018-05-24T09:42:00.411369 #12262] DEBUG -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:00.430151 #12262]  INFO -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:00.431018 #12262]  INFO -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   Rendered main/_table_row.html.erb (0.7ms)
+D, [2018-05-24T09:42:00.431154 #12262] DEBUG -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:00 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:00.481164 #12262]  INFO -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a] Completed 500 Internal Server Error in 1118ms (ActiveRecord: 944.1ms)
+F, [2018-05-24T09:42:00.482025 #12262] FATAL -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   
+F, [2018-05-24T09:42:00.482078 #12262] FATAL -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:00.482115 #12262] FATAL -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a]   
+F, [2018-05-24T09:42:00.482150 #12262] FATAL -- : [2e5fbf59-890f-4b7e-aea6-a908a6f8847a] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:00.496374 #12262]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:42:00 +0300
+I, [2018-05-24T09:42:07.991461 #12262]  INFO -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:07 +0300
+I, [2018-05-24T09:42:07.992861 #12262]  INFO -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:07.992997 #12262]  INFO -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:07.995984 #12262] DEBUG -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:07.997451 #12262] DEBUG -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:07.994570"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:07.996137"], ["updated_at", "2018-05-24 06:42:07.996137"]]
+D, [2018-05-24T09:42:08.016542 #12262] DEBUG -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:08.017423 #12262]  INFO -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:08.017929 #12262]  INFO -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   Rendered main/_table_row.html.erb (0.3ms)
+D, [2018-05-24T09:42:08.018084 #12262] DEBUG -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:07 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:08.019651 #12262]  INFO -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4] Completed 500 Internal Server Error in 26ms (ActiveRecord: 19.4ms)
+F, [2018-05-24T09:42:08.020375 #12262] FATAL -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   
+F, [2018-05-24T09:42:08.020439 #12262] FATAL -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:08.020474 #12262] FATAL -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4]   
+F, [2018-05-24T09:42:08.020513 #12262] FATAL -- : [b1a7af71-049f-48f0-b6d1-bfae31f497a4] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:09.133866 #12262]  INFO -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:09 +0300
+I, [2018-05-24T09:42:09.135196 #12262]  INFO -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:09.135316 #12262]  INFO -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:09.137518 #12262] DEBUG -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:09.139420 #12262] DEBUG -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:09.136450"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:09.137762"], ["updated_at", "2018-05-24 06:42:09.137762"]]
+D, [2018-05-24T09:42:09.160982 #12262] DEBUG -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:09.161664 #12262]  INFO -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:09.162146 #12262]  INFO -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   Rendered main/_table_row.html.erb (0.3ms)
+D, [2018-05-24T09:42:09.162312 #12262] DEBUG -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:09 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:09.164076 #12262]  INFO -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46] Completed 500 Internal Server Error in 29ms (ActiveRecord: 21.8ms)
+F, [2018-05-24T09:42:09.164802 #12262] FATAL -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   
+F, [2018-05-24T09:42:09.164874 #12262] FATAL -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:09.164946 #12262] FATAL -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46]   
+F, [2018-05-24T09:42:09.165033 #12262] FATAL -- : [5bac5fc8-d4ac-47bd-886a-75d6d2cc1a46] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:09.440678 #12262]  INFO -- : [9006fb8e-d836-404c-9634-683e938af9b8] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:09 +0300
+I, [2018-05-24T09:42:09.441341 #12262]  INFO -- : [9006fb8e-d836-404c-9634-683e938af9b8] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:09.441390 #12262]  INFO -- : [9006fb8e-d836-404c-9634-683e938af9b8]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:09.442833 #12262] DEBUG -- : [9006fb8e-d836-404c-9634-683e938af9b8]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:09.444393 #12262] DEBUG -- : [9006fb8e-d836-404c-9634-683e938af9b8]   [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:09.442036"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:09.442979"], ["updated_at", "2018-05-24 06:42:09.442979"]]
+D, [2018-05-24T09:42:09.457958 #12262] DEBUG -- : [9006fb8e-d836-404c-9634-683e938af9b8]   [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:09.458347 #12262]  INFO -- : [9006fb8e-d836-404c-9634-683e938af9b8]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:09.458631 #12262]  INFO -- : [9006fb8e-d836-404c-9634-683e938af9b8]   Rendered main/_table_row.html.erb (0.2ms)
+D, [2018-05-24T09:42:09.458754 #12262] DEBUG -- : [9006fb8e-d836-404c-9634-683e938af9b8] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:09 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:09.460142 #12262]  INFO -- : [9006fb8e-d836-404c-9634-683e938af9b8] Completed 500 Internal Server Error in 19ms (ActiveRecord: 14.0ms)
+F, [2018-05-24T09:42:09.460820 #12262] FATAL -- : [9006fb8e-d836-404c-9634-683e938af9b8]   
+F, [2018-05-24T09:42:09.460896 #12262] FATAL -- : [9006fb8e-d836-404c-9634-683e938af9b8] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:09.460949 #12262] FATAL -- : [9006fb8e-d836-404c-9634-683e938af9b8]   
+F, [2018-05-24T09:42:09.461019 #12262] FATAL -- : [9006fb8e-d836-404c-9634-683e938af9b8] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:09.646186 #12262]  INFO -- : [453ba3d0-9056-4127-92eb-19dc3db18c97] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:09 +0300
+I, [2018-05-24T09:42:09.646814 #12262]  INFO -- : [453ba3d0-9056-4127-92eb-19dc3db18c97] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:09.646873 #12262]  INFO -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:09.649371 #12262] DEBUG -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:09.652495 #12262] DEBUG -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:09.647664"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:09.649853"], ["updated_at", "2018-05-24 06:42:09.649853"]]
+D, [2018-05-24T09:42:09.667322 #12262] DEBUG -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:09.668095 #12262]  INFO -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:09.668504 #12262]  INFO -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   Rendered main/_table_row.html.erb (0.3ms)
+D, [2018-05-24T09:42:09.668625 #12262] DEBUG -- : [453ba3d0-9056-4127-92eb-19dc3db18c97] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:09 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:09.671137 #12262]  INFO -- : [453ba3d0-9056-4127-92eb-19dc3db18c97] Completed 500 Internal Server Error in 24ms (ActiveRecord: 15.2ms)
+F, [2018-05-24T09:42:09.672376 #12262] FATAL -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   
+F, [2018-05-24T09:42:09.672437 #12262] FATAL -- : [453ba3d0-9056-4127-92eb-19dc3db18c97] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:09.672484 #12262] FATAL -- : [453ba3d0-9056-4127-92eb-19dc3db18c97]   
+F, [2018-05-24T09:42:09.672517 #12262] FATAL -- : [453ba3d0-9056-4127-92eb-19dc3db18c97] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:09.850581 #12262]  INFO -- : [ec340ac7-6394-487b-972f-1a367ee1bae2] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:09 +0300
+I, [2018-05-24T09:42:09.854025 #12262]  INFO -- : [ec340ac7-6394-487b-972f-1a367ee1bae2] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:09.854351 #12262]  INFO -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:09.858407 #12262] DEBUG -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:09.860566 #12262] DEBUG -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   [1m[36mRequestModel Create (0.6ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:09.857230"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:09.858620"], ["updated_at", "2018-05-24 06:42:09.858620"]]
+D, [2018-05-24T09:42:09.865697 #12262] DEBUG -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:09.866705 #12262]  INFO -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:09.867339 #12262]  INFO -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   Rendered main/_table_row.html.erb (0.4ms)
+D, [2018-05-24T09:42:09.868115 #12262] DEBUG -- : [ec340ac7-6394-487b-972f-1a367ee1bae2] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:09 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:09.870555 #12262]  INFO -- : [ec340ac7-6394-487b-972f-1a367ee1bae2] Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.1ms)
+F, [2018-05-24T09:42:09.871822 #12262] FATAL -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   
+F, [2018-05-24T09:42:09.871887 #12262] FATAL -- : [ec340ac7-6394-487b-972f-1a367ee1bae2] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:09.871939 #12262] FATAL -- : [ec340ac7-6394-487b-972f-1a367ee1bae2]   
+F, [2018-05-24T09:42:09.871988 #12262] FATAL -- : [ec340ac7-6394-487b-972f-1a367ee1bae2] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:10.520359 #12262]  INFO -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:10 +0300
+I, [2018-05-24T09:42:10.521329 #12262]  INFO -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:10.521381 #12262]  INFO -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:10.523381 #12262] DEBUG -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:10.526557 #12262] DEBUG -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:10.522339"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:10.523744"], ["updated_at", "2018-05-24 06:42:10.523744"]]
+D, [2018-05-24T09:42:10.536540 #12262] DEBUG -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:10.537016 #12262]  INFO -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:10.537813 #12262]  INFO -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   Rendered main/_table_row.html.erb (0.7ms)
+D, [2018-05-24T09:42:10.537921 #12262] DEBUG -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:10 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:10.539760 #12262]  INFO -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0] Completed 500 Internal Server Error in 18ms (ActiveRecord: 10.0ms)
+F, [2018-05-24T09:42:10.540664 #12262] FATAL -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   
+F, [2018-05-24T09:42:10.540708 #12262] FATAL -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:10.540738 #12262] FATAL -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0]   
+F, [2018-05-24T09:42:10.540769 #12262] FATAL -- : [dafcdefd-c6ca-4938-8d08-379b8709dec0] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:11.051211 #12262]  INFO -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:11 +0300
+I, [2018-05-24T09:42:11.053492 #12262]  INFO -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:11.053644 #12262]  INFO -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:11.056196 #12262] DEBUG -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:11.058586 #12262] DEBUG -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   [1m[36mRequestModel Create (1.0ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:11.055184"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:11.056395"], ["updated_at", "2018-05-24 06:42:11.056395"]]
+D, [2018-05-24T09:42:11.065232 #12262] DEBUG -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:11.066918 #12262]  INFO -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:11.067394 #12262]  INFO -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   Rendered main/_table_row.html.erb (0.3ms)
+D, [2018-05-24T09:42:11.067518 #12262] DEBUG -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:11 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:11.069700 #12262]  INFO -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b] Completed 500 Internal Server Error in 16ms (ActiveRecord: 7.3ms)
+F, [2018-05-24T09:42:11.071258 #12262] FATAL -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   
+F, [2018-05-24T09:42:11.071320 #12262] FATAL -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:11.071356 #12262] FATAL -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b]   
+F, [2018-05-24T09:42:11.071395 #12262] FATAL -- : [4cf8c9fc-80b4-44fb-b1fa-de0c1723a59b] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:11.338447 #12262]  INFO -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:11 +0300
+I, [2018-05-24T09:42:11.339772 #12262]  INFO -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:11.339863 #12262]  INFO -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:11.341947 #12262] DEBUG -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:11.343788 #12262] DEBUG -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   [1m[36mRequestModel Create (0.7ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:11.341132"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:11.342146"], ["updated_at", "2018-05-24 06:42:11.342146"]]
+D, [2018-05-24T09:42:11.351024 #12262] DEBUG -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:11.351629 #12262]  INFO -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:11.352031 #12262]  INFO -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   Rendered main/_table_row.html.erb (0.3ms)
+D, [2018-05-24T09:42:11.352160 #12262] DEBUG -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:11 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:11.354148 #12262]  INFO -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d] Completed 500 Internal Server Error in 14ms (ActiveRecord: 7.6ms)
+F, [2018-05-24T09:42:11.355835 #12262] FATAL -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   
+F, [2018-05-24T09:42:11.355895 #12262] FATAL -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d] Redis::CannotConnectError (Error connecting to Redis on localhost:6379 (Errno::ECONNREFUSED)):
+F, [2018-05-24T09:42:11.355943 #12262] FATAL -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d]   
+F, [2018-05-24T09:42:11.355990 #12262] FATAL -- : [3303acdb-82da-406d-8e4d-a7ab1232a23d] app/controllers/main_controller.rb:22:in `save_request'
+I, [2018-05-24T09:42:34.510899 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130] Started GET "/45" for 127.0.0.1 at 2018-05-24 09:42:34 +0300
+I, [2018-05-24T09:42:34.512057 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:42:34.512126 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   Parameters: {"trap_id"=>"45"}
+D, [2018-05-24T09:42:34.514214 #12262] DEBUG -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:42:34.516715 #12262] DEBUG -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:42:34.513111"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/45"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"45\"}"], ["cookies", "{\"_requests_trap_session\":\"BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "45"], ["created_at", "2018-05-24 06:42:34.514524"], ["updated_at", "2018-05-24 06:42:34.514524"]]
+D, [2018-05-24T09:42:34.529401 #12262] DEBUG -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:42:34.529898 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:42:34.530256 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   Rendered main/_table_row.html.erb (0.2ms)
+D, [2018-05-24T09:42:34.530392 #12262] DEBUG -- : [2022461f-1c11-4cce-a4f4-76ec47505130] [ActionCable] Broadcasting to r45: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;45&quot;}</td>\n  <td>/45</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;BSIf/9v5w+FeoHjz/j5mrp1DTzkdS3ROp2ckYTcztPsYqFd243Oz2dJEE9Ce1NfzeELN1sjT8jRQKf9xWMfclH3OTgvr11a3IeRR0VTc4qf55WswkkJF4PF/b3l72Zv/Y3Zo+artU/gjOIsKtrs=--BVUWELZQPi1gZmDd--iN30HBkgaE0dmGelRIzGjg==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:42:34 UTC</td>\n</tr>"
+I, [2018-05-24T09:42:34.549101 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   Rendering main/save_request.html.erb within layouts/application
+I, [2018-05-24T09:42:34.550972 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130]   Rendered main/save_request.html.erb within layouts/application (1.7ms)
+I, [2018-05-24T09:42:34.552055 #12262]  INFO -- : [2022461f-1c11-4cce-a4f4-76ec47505130] Completed 200 OK in 39ms (Views: 3.0ms | ActiveRecord: 12.8ms)
+I, [2018-05-24T09:42:34.805487 #12262]  INFO -- : [183e13d2-b7ac-4257-860c-42d2368cbde1] Started GET "/cable" for 127.0.0.1 at 2018-05-24 09:42:34 +0300
+I, [2018-05-24T09:42:34.806684 #12262]  INFO -- : [183e13d2-b7ac-4257-860c-42d2368cbde1] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:42:34 +0300
+I, [2018-05-24T09:42:34.806763 #12262]  INFO -- : [183e13d2-b7ac-4257-860c-42d2368cbde1] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T09:42:34.834028 #12262] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T09:42:36.280575 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7] Started GET "/45/requests" for 127.0.0.1 at 2018-05-24 09:42:36 +0300
+I, [2018-05-24T09:42:36.282651 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7] Processing by MainController#show_requests as HTML
+I, [2018-05-24T09:42:36.282779 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Parameters: {"trap_id"=>"45"}
+I, [2018-05-24T09:42:36.296201 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T09:42:36.418200 #12262] DEBUG -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   [1m[36mRequestModel Load (119.1ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '45') ORDER BY request_date desc[0m
+I, [2018-05-24T09:42:36.425110 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (1.9ms)
+I, [2018-05-24T09:42:36.426596 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T09:42:36.427186 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.3ms)
+I, [2018-05-24T09:42:36.427410 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.427924 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T09:42:36.428137 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.428376 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.428916 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T09:42:36.429147 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.429374 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.429605 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.429811 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.430334 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.430554 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.430765 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T09:42:36.431275 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T09:42:36.431348 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7]   Rendered main/show_requests.html.erb within layouts/application (135.0ms)
+I, [2018-05-24T09:42:36.431955 #12262]  INFO -- : [8a079319-88e2-4017-ba9a-7122c02dffa7] Completed 200 OK in 149ms (Views: 17.1ms | ActiveRecord: 119.1ms)
+I, [2018-05-24T09:50:58.322423 #12262]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:50:58 +0300
+I, [2018-05-24T09:52:37.225435 #12262]  INFO -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 09:52:37 +0300
+I, [2018-05-24T09:52:37.226211 #12262]  INFO -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21] Processing by MainController#show_requests as HTML
+I, [2018-05-24T09:52:37.226278 #12262]  INFO -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T09:52:37.239585 #12262]  INFO -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T09:52:37.242214 #12262] DEBUG -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21]   [1m[36mRequestModel Load (2.0ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T09:52:37.242589 #12262]  INFO -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21]   Rendered main/show_requests.html.erb within layouts/application (2.9ms)
+I, [2018-05-24T09:52:37.244116 #12262]  INFO -- : [85b4efa9-2e6f-4753-a5b7-c7aed69fcf21] Completed 200 OK in 18ms (Views: 2.5ms | ActiveRecord: 8.7ms)
+I, [2018-05-24T09:52:37.511759 #12262]  INFO -- : [531fcf22-751a-4e2b-ac3b-8b34d12faf79] Started GET "/cable" for 127.0.0.1 at 2018-05-24 09:52:37 +0300
+I, [2018-05-24T09:52:37.512746 #12262]  INFO -- : [531fcf22-751a-4e2b-ac3b-8b34d12faf79] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:52:37 +0300
+I, [2018-05-24T09:52:37.512905 #12262]  INFO -- : [531fcf22-751a-4e2b-ac3b-8b34d12faf79] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T09:52:37.555961 #12262] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T09:52:37.577161 #12262]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T09:52:37.577436 #12262]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T09:52:43.179202 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff] Started GET "/4" for 127.0.0.1 at 2018-05-24 09:52:43 +0300
+I, [2018-05-24T09:52:43.180721 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff] Processing by MainController#save_request as HTML
+I, [2018-05-24T09:52:43.180854 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   Parameters: {"trap_id"=>"4"}
+D, [2018-05-24T09:52:43.183352 #12262] DEBUG -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T09:52:43.185913 #12262] DEBUG -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   [1m[36mRequestModel Create (0.9ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 06:52:43.182127"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"4\"}"], ["cookies", "{\"_requests_trap_session\":\"TVsnTG3P9t0413UUn+n5kACxkuTJM21aC4gsbqwDLRVQ6x1egjwoq3kGGxDTchIf+IBQ8ZqHtHIhD4YpmgS4n3A0TRVtUbJwDQ9jhifYXIOccJ9w+3amWSeoG1j31TNrWmPJ74fFPRM58PBFMJU=--cjsEmR9+/18EjvZI--TjdEtITp6kHQLsXsBTjgHw==\"}"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "4"], ["created_at", "2018-05-24 06:52:43.183652"], ["updated_at", "2018-05-24 06:52:43.183652"]]
+D, [2018-05-24T09:52:43.218869 #12262] DEBUG -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T09:52:43.219753 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   Rendering main/_table_row.html.erb
+I, [2018-05-24T09:52:43.220001 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   Rendered main/_table_row.html.erb (0.2ms)
+D, [2018-05-24T09:52:43.220079 #12262] DEBUG -- : [f64a922a-d69b-4018-b714-0ff03f35daff] [ActionCable] Broadcasting to r4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;TVsnTG3P9t0413UUn+n5kACxkuTJM21aC4gsbqwDLRVQ6x1egjwoq3kGGxDTchIf+IBQ8ZqHtHIhD4YpmgS4n3A0TRVtUbJwDQ9jhifYXIOccJ9w+3amWSeoG1j31TNrWmPJ74fFPRM58PBFMJU=--cjsEmR9+/18EjvZI--TjdEtITp6kHQLsXsBTjgHw==&quot;}</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 06:52:43 UTC</td>\n</tr>"
+I, [2018-05-24T09:52:43.220641 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   Rendering main/save_request.html.erb within layouts/application
+I, [2018-05-24T09:52:43.220970 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff]   Rendered main/save_request.html.erb within layouts/application (0.2ms)
+I, [2018-05-24T09:52:43.221578 #12262]  INFO -- : [f64a922a-d69b-4018-b714-0ff03f35daff] Completed 200 OK in 41ms (Views: 1.0ms | ActiveRecord: 33.7ms)
+D, [2018-05-24T09:52:43.223119 #12262] DEBUG -- : RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>{&quot;_requests_trap_session&quot;:&quot;TVsnTG3P9t0413UUn+n5kACxkuTJM21aC4gsbqwDLRVQ6x1egjwoq3kGGxDTchIf+IBQ8ZqHtHIhD4YpmgS4n3A0TRVtUbJ... (via streamed from r4)
+E, [2018-05-24T09:52:43.226417 #12262] ERROR -- : Unable to process RequestsChannel#update
+I, [2018-05-24T09:52:43.240414 #12262]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:52:43 +0300
+I, [2018-05-24T09:52:43.240851 #12262]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T09:52:43.368002 #12262]  INFO -- : [aa5c45fe-f3c6-4d31-b6d3-33d1d429a839] Started GET "/cable" for 127.0.0.1 at 2018-05-24 09:52:43 +0300
+I, [2018-05-24T09:52:43.368747 #12262]  INFO -- : [aa5c45fe-f3c6-4d31-b6d3-33d1d429a839] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:52:43 +0300
+I, [2018-05-24T09:52:43.368850 #12262]  INFO -- : [aa5c45fe-f3c6-4d31-b6d3-33d1d429a839] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T09:52:43.405632 #12262] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T09:52:44.894700 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 09:52:44 +0300
+I, [2018-05-24T09:52:44.896844 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d] Processing by MainController#show_requests as HTML
+I, [2018-05-24T09:52:44.897084 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T09:52:44.899776 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T09:52:44.901195 #12262] DEBUG -- : [4547b29a-59b3-487d-aaa2-2b615499470d]   [1m[36mRequestModel Load (0.9ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T09:52:44.902164 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T09:52:44.902279 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d]   Rendered main/show_requests.html.erb within layouts/application (2.4ms)
+I, [2018-05-24T09:52:44.903266 #12262]  INFO -- : [4547b29a-59b3-487d-aaa2-2b615499470d] Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.9ms)
+I, [2018-05-24T09:52:58.782855 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 09:52:58 +0300
+I, [2018-05-24T09:52:58.784274 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc] Processing by MainController#show_requests as HTML
+I, [2018-05-24T09:52:58.784397 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T09:52:58.786424 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T09:52:58.788514 #12262] DEBUG -- : [c2876cf9-331a-44be-8173-d058766029fc]   [1m[36mRequestModel Load (1.0ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T09:52:58.789757 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T09:52:58.789907 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc]   Rendered main/show_requests.html.erb within layouts/application (3.3ms)
+I, [2018-05-24T09:52:58.791208 #12262]  INFO -- : [c2876cf9-331a-44be-8173-d058766029fc] Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 1.0ms)
+I, [2018-05-24T09:54:50.769855 #12262]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:54:50 +0300
+I, [2018-05-24T09:56:55.677121 #12262]  INFO -- : [f721bb38-9753-4659-aff6-2ffd633d42b2] Started GET "/" for 127.0.0.1 at 2018-05-24 09:56:55 +0300
+I, [2018-05-24T09:56:55.677720 #12262]  INFO -- : [f721bb38-9753-4659-aff6-2ffd633d42b2] Processing by MainController#index as HTML
+I, [2018-05-24T09:56:55.678608 #12262]  INFO -- : [f721bb38-9753-4659-aff6-2ffd633d42b2]   Rendering main/index.html.erb within layouts/application
+I, [2018-05-24T09:56:55.678882 #12262]  INFO -- : [f721bb38-9753-4659-aff6-2ffd633d42b2]   Rendered main/index.html.erb within layouts/application (0.2ms)
+I, [2018-05-24T09:56:55.679565 #12262]  INFO -- : [f721bb38-9753-4659-aff6-2ffd633d42b2] Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+I, [2018-05-24T09:56:55.974511 #12262]  INFO -- : [1481a6ea-36c2-460c-85cf-1f5a6bc54e35] Started GET "/cable" for 127.0.0.1 at 2018-05-24 09:56:55 +0300
+I, [2018-05-24T09:56:55.975183 #12262]  INFO -- : [1481a6ea-36c2-460c-85cf-1f5a6bc54e35] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 09:56:55 +0300
+I, [2018-05-24T09:56:55.975270 #12262]  INFO -- : [1481a6ea-36c2-460c-85cf-1f5a6bc54e35] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T09:56:56.006058 #12262] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T18:51:05.304218 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f] Started GET "/4" for 127.0.0.1 at 2018-05-24 18:51:05 +0300
+I, [2018-05-24T18:51:05.322112 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f] Processing by MainController#save_request as HTML
+I, [2018-05-24T18:51:05.322324 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   Parameters: {"trap_id"=>"4"}
+D, [2018-05-24T18:51:05.606072 #12823] DEBUG -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T18:51:05.618277 #12823] DEBUG -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   [1m[36mRequestModel Create (10.3ms)[0m  [1m[32mINSERT INTO "request_models" ("request_date", "remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["request_date", "2018-05-24 15:51:05.605078"], ["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"4\"}"], ["cookies", "[]"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "4"], ["created_at", "2018-05-24 15:51:05.606375"], ["updated_at", "2018-05-24 15:51:05.606375"]]
+D, [2018-05-24T18:51:05.633043 #12823] DEBUG -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T18:51:05.651280 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   Rendering main/_table_row.html.erb
+I, [2018-05-24T18:51:05.652257 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   Rendered main/_table_row.html.erb (0.9ms)
+D, [2018-05-24T18:51:05.652391 #12823] DEBUG -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f] [ActionCable] Broadcasting to r4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>[]</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 15:51:05 UTC</td>\n</tr>"
+I, [2018-05-24T18:51:05.945516 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   Rendering main/save_request.html.erb within layouts/application
+I, [2018-05-24T18:51:05.947475 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f]   Rendered main/save_request.html.erb within layouts/application (1.7ms)
+I, [2018-05-24T18:51:05.948959 #12823]  INFO -- : [2d5c62bf-3ef5-40a9-9082-18cd25544e5f] Completed 200 OK in 626ms (Views: 123.3ms | ActiveRecord: 226.4ms)
+I, [2018-05-24T18:51:06.322779 #12823]  INFO -- : [694e242c-7ff4-4658-a248-058543e3d7a9] Started GET "/cable" for 127.0.0.1 at 2018-05-24 18:51:06 +0300
+I, [2018-05-24T18:51:06.689718 #12823]  INFO -- : [694e242c-7ff4-4658-a248-058543e3d7a9] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 18:51:06 +0300
+I, [2018-05-24T18:51:06.689830 #12823]  INFO -- : [694e242c-7ff4-4658-a248-058543e3d7a9] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T18:51:06.759285 #12823] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T18:51:12.992736 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 18:51:12 +0300
+I, [2018-05-24T18:51:12.994185 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707] Processing by MainController#show_requests as HTML
+I, [2018-05-24T18:51:12.994270 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T18:51:13.012260 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T18:51:13.016073 #12823] DEBUG -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707]   [1m[36mRequestModel Load (2.0ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T18:51:13.019966 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707]   Rendered main/_table_row.html.erb (1.9ms)
+I, [2018-05-24T18:51:13.021228 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707]   Rendered main/_table_row.html.erb (0.6ms)
+I, [2018-05-24T18:51:13.021580 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707]   Rendered main/show_requests.html.erb within layouts/application (9.1ms)
+I, [2018-05-24T18:51:13.023648 #12823]  INFO -- : [4cdcc00b-fa61-46ee-a36e-ea89f271d707] Completed 200 OK in 29ms (Views: 9.6ms | ActiveRecord: 2.0ms)
+I, [2018-05-24T19:04:38.963275 #14765]  INFO -- : [252de632-74b4-4b1e-8049-d4f14bf13f8b] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:04:38 +0300
+I, [2018-05-24T19:04:38.970550 #14765]  INFO -- : [252de632-74b4-4b1e-8049-d4f14bf13f8b] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:04:38 +0300
+I, [2018-05-24T19:04:38.970738 #14765]  INFO -- : [252de632-74b4-4b1e-8049-d4f14bf13f8b] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:04:38.981791 #14765] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:04:39.139377 #14765]  INFO -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:04:39 +0300
+I, [2018-05-24T19:04:39.140902 #14765]  INFO -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:04:39.140988 #14765]  INFO -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:04:39.168122 #14765]  INFO -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:04:39.205249 #14765] DEBUG -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]   [1m[36mRequestModel Load (35.1ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:04:39.206192 #14765]  INFO -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]   Rendered main/show_requests.html.erb within layouts/application (37.9ms)
+I, [2018-05-24T19:04:39.206494 #14765]  INFO -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b] Completed 500 Internal Server Error in 65ms (ActiveRecord: 41.1ms)
+F, [2018-05-24T19:04:39.208165 #14765] FATAL -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]   
+F, [2018-05-24T19:04:39.208283 #14765] FATAL -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:04:39.208528 #14765] FATAL -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     11:     <th>Remote ip</th>
+[f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     12:     <th>Request date</th>
+[f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     13:   </tr>
+[f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     14:   <% @requests.each do |app| %>
+[f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     15:       <%= render "table_row", {app_request:app} %>
+[f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     16:   <% end %>
+[f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]     17: </table>
+F, [2018-05-24T19:04:39.208582 #14765] FATAL -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b]   
+F, [2018-05-24T19:04:39.208630 #14765] FATAL -- : [f3cafea2-6f89-44e5-ad8b-02e15eeb4d3b] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:04:39.237192 #14765]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:04:39 +0300
+I, [2018-05-24T19:04:40.223179 #14765]  INFO -- : [356527d9-a8ca-44d7-9bae-66180146dd42] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:04:40 +0300
+I, [2018-05-24T19:04:40.224082 #14765]  INFO -- : [356527d9-a8ca-44d7-9bae-66180146dd42] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:04:40.224147 #14765]  INFO -- : [356527d9-a8ca-44d7-9bae-66180146dd42]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:04:40.225942 #14765]  INFO -- : [356527d9-a8ca-44d7-9bae-66180146dd42]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:04:40.227102 #14765] DEBUG -- : [356527d9-a8ca-44d7-9bae-66180146dd42]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:04:40.227760 #14765]  INFO -- : [356527d9-a8ca-44d7-9bae-66180146dd42]   Rendered main/show_requests.html.erb within layouts/application (1.7ms)
+I, [2018-05-24T19:04:40.227932 #14765]  INFO -- : [356527d9-a8ca-44d7-9bae-66180146dd42] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:04:40.228871 #14765] FATAL -- : [356527d9-a8ca-44d7-9bae-66180146dd42]   
+F, [2018-05-24T19:04:40.228921 #14765] FATAL -- : [356527d9-a8ca-44d7-9bae-66180146dd42] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:04:40.229076 #14765] FATAL -- : [356527d9-a8ca-44d7-9bae-66180146dd42]     11:     <th>Remote ip</th>
+[356527d9-a8ca-44d7-9bae-66180146dd42]     12:     <th>Request date</th>
+[356527d9-a8ca-44d7-9bae-66180146dd42]     13:   </tr>
+[356527d9-a8ca-44d7-9bae-66180146dd42]     14:   <% @requests.each do |app| %>
+[356527d9-a8ca-44d7-9bae-66180146dd42]     15:       <%= render "table_row", {app_request:app} %>
+[356527d9-a8ca-44d7-9bae-66180146dd42]     16:   <% end %>
+[356527d9-a8ca-44d7-9bae-66180146dd42]     17: </table>
+F, [2018-05-24T19:04:40.229118 #14765] FATAL -- : [356527d9-a8ca-44d7-9bae-66180146dd42]   
+F, [2018-05-24T19:04:40.229153 #14765] FATAL -- : [356527d9-a8ca-44d7-9bae-66180146dd42] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:04:40.924112 #14765]  INFO -- : [c057e453-4a46-4369-af6f-b25dbf3d331e] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:04:40 +0300
+I, [2018-05-24T19:04:40.924987 #14765]  INFO -- : [c057e453-4a46-4369-af6f-b25dbf3d331e] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:04:40.925069 #14765]  INFO -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:04:40.926842 #14765]  INFO -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:04:40.928169 #14765] DEBUG -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]   [1m[36mRequestModel Load (0.8ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:04:40.929046 #14765]  INFO -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]   Rendered main/show_requests.html.erb within layouts/application (2.1ms)
+I, [2018-05-24T19:04:40.929191 #14765]  INFO -- : [c057e453-4a46-4369-af6f-b25dbf3d331e] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms)
+F, [2018-05-24T19:04:40.930213 #14765] FATAL -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]   
+F, [2018-05-24T19:04:40.930260 #14765] FATAL -- : [c057e453-4a46-4369-af6f-b25dbf3d331e] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:04:40.930409 #14765] FATAL -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]     11:     <th>Remote ip</th>
+[c057e453-4a46-4369-af6f-b25dbf3d331e]     12:     <th>Request date</th>
+[c057e453-4a46-4369-af6f-b25dbf3d331e]     13:   </tr>
+[c057e453-4a46-4369-af6f-b25dbf3d331e]     14:   <% @requests.each do |app| %>
+[c057e453-4a46-4369-af6f-b25dbf3d331e]     15:       <%= render "table_row", {app_request:app} %>
+[c057e453-4a46-4369-af6f-b25dbf3d331e]     16:   <% end %>
+[c057e453-4a46-4369-af6f-b25dbf3d331e]     17: </table>
+F, [2018-05-24T19:04:40.930442 #14765] FATAL -- : [c057e453-4a46-4369-af6f-b25dbf3d331e]   
+F, [2018-05-24T19:04:40.930478 #14765] FATAL -- : [c057e453-4a46-4369-af6f-b25dbf3d331e] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:04:46.066092 #14765]  INFO -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:04:46 +0300
+I, [2018-05-24T19:04:46.067309 #14765]  INFO -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:04:46.067414 #14765]  INFO -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:04:46.069263 #14765]  INFO -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:04:46.070508 #14765] DEBUG -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:04:46.071339 #14765]  INFO -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]   Rendered main/show_requests.html.erb within layouts/application (1.9ms)
+I, [2018-05-24T19:04:46.071565 #14765]  INFO -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:04:46.073043 #14765] FATAL -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]   
+F, [2018-05-24T19:04:46.073116 #14765] FATAL -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:04:46.073334 #14765] FATAL -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]     11:     <th>Remote ip</th>
+[7b48fd75-2a8b-44b1-beba-88c1417f414b]     12:     <th>Request date</th>
+[7b48fd75-2a8b-44b1-beba-88c1417f414b]     13:   </tr>
+[7b48fd75-2a8b-44b1-beba-88c1417f414b]     14:   <% @requests.each do |app| %>
+[7b48fd75-2a8b-44b1-beba-88c1417f414b]     15:       <%= render "table_row", {app_request:app} %>
+[7b48fd75-2a8b-44b1-beba-88c1417f414b]     16:   <% end %>
+[7b48fd75-2a8b-44b1-beba-88c1417f414b]     17: </table>
+F, [2018-05-24T19:04:46.073382 #14765] FATAL -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b]   
+F, [2018-05-24T19:04:46.073428 #14765] FATAL -- : [7b48fd75-2a8b-44b1-beba-88c1417f414b] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:04:46.668897 #14765]  INFO -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:04:46 +0300
+I, [2018-05-24T19:04:46.670041 #14765]  INFO -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:04:46.670144 #14765]  INFO -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:04:46.672035 #14765]  INFO -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:04:46.673295 #14765] DEBUG -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:04:46.674196 #14765]  INFO -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]   Rendered main/show_requests.html.erb within layouts/application (2.0ms)
+I, [2018-05-24T19:04:46.674414 #14765]  INFO -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:04:46.676531 #14765] FATAL -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]   
+F, [2018-05-24T19:04:46.676644 #14765] FATAL -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:04:46.677007 #14765] FATAL -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     11:     <th>Remote ip</th>
+[a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     12:     <th>Request date</th>
+[a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     13:   </tr>
+[a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     14:   <% @requests.each do |app| %>
+[a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     15:       <%= render "table_row", {app_request:app} %>
+[a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     16:   <% end %>
+[a55e7ffc-e27d-4141-b4fc-7397d2a0e111]     17: </table>
+F, [2018-05-24T19:04:46.677081 #14765] FATAL -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111]   
+F, [2018-05-24T19:04:46.677159 #14765] FATAL -- : [a55e7ffc-e27d-4141-b4fc-7397d2a0e111] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:04:47.007440 #14765]  INFO -- : [09b06462-f131-4cdd-a70e-69a6d4f50017] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:04:47 +0300
+I, [2018-05-24T19:04:47.008226 #14765]  INFO -- : [09b06462-f131-4cdd-a70e-69a6d4f50017] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:04:47.008285 #14765]  INFO -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:04:47.009575 #14765]  INFO -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:04:47.010656 #14765] DEBUG -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:04:47.011354 #14765]  INFO -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]   Rendered main/show_requests.html.erb within layouts/application (1.7ms)
+I, [2018-05-24T19:04:47.011534 #14765]  INFO -- : [09b06462-f131-4cdd-a70e-69a6d4f50017] Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:04:47.012503 #14765] FATAL -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]   
+F, [2018-05-24T19:04:47.012569 #14765] FATAL -- : [09b06462-f131-4cdd-a70e-69a6d4f50017] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:04:47.012717 #14765] FATAL -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]     11:     <th>Remote ip</th>
+[09b06462-f131-4cdd-a70e-69a6d4f50017]     12:     <th>Request date</th>
+[09b06462-f131-4cdd-a70e-69a6d4f50017]     13:   </tr>
+[09b06462-f131-4cdd-a70e-69a6d4f50017]     14:   <% @requests.each do |app| %>
+[09b06462-f131-4cdd-a70e-69a6d4f50017]     15:       <%= render "table_row", {app_request:app} %>
+[09b06462-f131-4cdd-a70e-69a6d4f50017]     16:   <% end %>
+[09b06462-f131-4cdd-a70e-69a6d4f50017]     17: </table>
+F, [2018-05-24T19:04:47.012755 #14765] FATAL -- : [09b06462-f131-4cdd-a70e-69a6d4f50017]   
+F, [2018-05-24T19:04:47.012788 #14765] FATAL -- : [09b06462-f131-4cdd-a70e-69a6d4f50017] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:05:02.484653 #14765]  INFO -- : [808ed49e-82ce-4d14-a665-49f0d722d2de] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:02 +0300
+I, [2018-05-24T19:05:02.485515 #14765]  INFO -- : [808ed49e-82ce-4d14-a665-49f0d722d2de] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:02.485605 #14765]  INFO -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:02.487173 #14765]  INFO -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:02.488373 #14765] DEBUG -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:02.489115 #14765]  INFO -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]   Rendered main/show_requests.html.erb within layouts/application (1.8ms)
+I, [2018-05-24T19:05:02.489358 #14765]  INFO -- : [808ed49e-82ce-4d14-a665-49f0d722d2de] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:02.490392 #14765] FATAL -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]   
+F, [2018-05-24T19:05:02.490480 #14765] FATAL -- : [808ed49e-82ce-4d14-a665-49f0d722d2de] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:02.490661 #14765] FATAL -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]     11:     <th>Remote ip</th>
+[808ed49e-82ce-4d14-a665-49f0d722d2de]     12:     <th>Request date</th>
+[808ed49e-82ce-4d14-a665-49f0d722d2de]     13:   </tr>
+[808ed49e-82ce-4d14-a665-49f0d722d2de]     14:   <% @requests.each do |app| %>
+[808ed49e-82ce-4d14-a665-49f0d722d2de]     15:       <%= render "table_row", {app_request:app} %>
+[808ed49e-82ce-4d14-a665-49f0d722d2de]     16:   <% end %>
+[808ed49e-82ce-4d14-a665-49f0d722d2de]     17: </table>
+F, [2018-05-24T19:05:02.490695 #14765] FATAL -- : [808ed49e-82ce-4d14-a665-49f0d722d2de]   
+F, [2018-05-24T19:05:02.490733 #14765] FATAL -- : [808ed49e-82ce-4d14-a665-49f0d722d2de] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___1486562866230552097_22417140'
+I, [2018-05-24T19:05:09.784919 #14926]  INFO -- : [6c1feb01-39e8-416e-9279-7b478f0366ee] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:09 +0300
+I, [2018-05-24T19:05:09.788370 #14926]  INFO -- : [6c1feb01-39e8-416e-9279-7b478f0366ee] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:09.788422 #14926]  INFO -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:09.814377 #14926]  INFO -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:09.817371 #14926] DEBUG -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]   [1m[36mRequestModel Load (1.2ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:09.818229 #14926]  INFO -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]   Rendered main/show_requests.html.erb within layouts/application (3.7ms)
+I, [2018-05-24T19:05:09.818469 #14926]  INFO -- : [6c1feb01-39e8-416e-9279-7b478f0366ee] Completed 500 Internal Server Error in 30ms (ActiveRecord: 8.6ms)
+F, [2018-05-24T19:05:09.820053 #14926] FATAL -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]   
+F, [2018-05-24T19:05:09.820133 #14926] FATAL -- : [6c1feb01-39e8-416e-9279-7b478f0366ee] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:09.820383 #14926] FATAL -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]     11:     <th>Remote ip</th>
+[6c1feb01-39e8-416e-9279-7b478f0366ee]     12:     <th>Request date</th>
+[6c1feb01-39e8-416e-9279-7b478f0366ee]     13:   </tr>
+[6c1feb01-39e8-416e-9279-7b478f0366ee]     14:   <% @requests.each do |app| %>
+[6c1feb01-39e8-416e-9279-7b478f0366ee]     15:       <%= render "table_row", {app_request:app} %>
+[6c1feb01-39e8-416e-9279-7b478f0366ee]     16:   <% end %>
+[6c1feb01-39e8-416e-9279-7b478f0366ee]     17: </table>
+F, [2018-05-24T19:05:09.820445 #14926] FATAL -- : [6c1feb01-39e8-416e-9279-7b478f0366ee]   
+F, [2018-05-24T19:05:09.820581 #14926] FATAL -- : [6c1feb01-39e8-416e-9279-7b478f0366ee] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:10.506071 #14926]  INFO -- : [54559634-7c0c-4120-ac66-491a7e80e294] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:10 +0300
+I, [2018-05-24T19:05:10.506970 #14926]  INFO -- : [54559634-7c0c-4120-ac66-491a7e80e294] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:10.507039 #14926]  INFO -- : [54559634-7c0c-4120-ac66-491a7e80e294]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:10.508991 #14926]  INFO -- : [54559634-7c0c-4120-ac66-491a7e80e294]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:10.510212 #14926] DEBUG -- : [54559634-7c0c-4120-ac66-491a7e80e294]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:10.510890 #14926]  INFO -- : [54559634-7c0c-4120-ac66-491a7e80e294]   Rendered main/show_requests.html.erb within layouts/application (1.7ms)
+I, [2018-05-24T19:05:10.511054 #14926]  INFO -- : [54559634-7c0c-4120-ac66-491a7e80e294] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:10.512304 #14926] FATAL -- : [54559634-7c0c-4120-ac66-491a7e80e294]   
+F, [2018-05-24T19:05:10.512360 #14926] FATAL -- : [54559634-7c0c-4120-ac66-491a7e80e294] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:10.512532 #14926] FATAL -- : [54559634-7c0c-4120-ac66-491a7e80e294]     11:     <th>Remote ip</th>
+[54559634-7c0c-4120-ac66-491a7e80e294]     12:     <th>Request date</th>
+[54559634-7c0c-4120-ac66-491a7e80e294]     13:   </tr>
+[54559634-7c0c-4120-ac66-491a7e80e294]     14:   <% @requests.each do |app| %>
+[54559634-7c0c-4120-ac66-491a7e80e294]     15:       <%= render "table_row", {app_request:app} %>
+[54559634-7c0c-4120-ac66-491a7e80e294]     16:   <% end %>
+[54559634-7c0c-4120-ac66-491a7e80e294]     17: </table>
+F, [2018-05-24T19:05:10.512571 #14926] FATAL -- : [54559634-7c0c-4120-ac66-491a7e80e294]   
+F, [2018-05-24T19:05:10.512681 #14926] FATAL -- : [54559634-7c0c-4120-ac66-491a7e80e294] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:10.896615 #14926]  INFO -- : [0c89cdbf-171d-449c-b760-6d9f59648503] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:10 +0300
+I, [2018-05-24T19:05:10.897431 #14926]  INFO -- : [0c89cdbf-171d-449c-b760-6d9f59648503] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:10.897501 #14926]  INFO -- : [0c89cdbf-171d-449c-b760-6d9f59648503]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:10.899325 #14926]  INFO -- : [0c89cdbf-171d-449c-b760-6d9f59648503]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:10.900479 #14926] DEBUG -- : [0c89cdbf-171d-449c-b760-6d9f59648503]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:10.901304 #14926]  INFO -- : [0c89cdbf-171d-449c-b760-6d9f59648503]   Rendered main/show_requests.html.erb within layouts/application (1.8ms)
+I, [2018-05-24T19:05:10.901494 #14926]  INFO -- : [0c89cdbf-171d-449c-b760-6d9f59648503] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:10.902899 #14926] FATAL -- : [0c89cdbf-171d-449c-b760-6d9f59648503]   
+F, [2018-05-24T19:05:10.902968 #14926] FATAL -- : [0c89cdbf-171d-449c-b760-6d9f59648503] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:10.903224 #14926] FATAL -- : [0c89cdbf-171d-449c-b760-6d9f59648503]     11:     <th>Remote ip</th>
+[0c89cdbf-171d-449c-b760-6d9f59648503]     12:     <th>Request date</th>
+[0c89cdbf-171d-449c-b760-6d9f59648503]     13:   </tr>
+[0c89cdbf-171d-449c-b760-6d9f59648503]     14:   <% @requests.each do |app| %>
+[0c89cdbf-171d-449c-b760-6d9f59648503]     15:       <%= render "table_row", {app_request:app} %>
+[0c89cdbf-171d-449c-b760-6d9f59648503]     16:   <% end %>
+[0c89cdbf-171d-449c-b760-6d9f59648503]     17: </table>
+F, [2018-05-24T19:05:10.903272 #14926] FATAL -- : [0c89cdbf-171d-449c-b760-6d9f59648503]   
+F, [2018-05-24T19:05:10.903302 #14926] FATAL -- : [0c89cdbf-171d-449c-b760-6d9f59648503] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:11.152733 #14926]  INFO -- : [c47d259b-2792-457f-99b8-a57a3c56240d] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:11 +0300
+I, [2018-05-24T19:05:11.153419 #14926]  INFO -- : [c47d259b-2792-457f-99b8-a57a3c56240d] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:11.153470 #14926]  INFO -- : [c47d259b-2792-457f-99b8-a57a3c56240d]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:11.154686 #14926]  INFO -- : [c47d259b-2792-457f-99b8-a57a3c56240d]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:11.155498 #14926] DEBUG -- : [c47d259b-2792-457f-99b8-a57a3c56240d]   [1m[36mRequestModel Load (0.4ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:11.156070 #14926]  INFO -- : [c47d259b-2792-457f-99b8-a57a3c56240d]   Rendered main/show_requests.html.erb within layouts/application (1.3ms)
+I, [2018-05-24T19:05:11.156194 #14926]  INFO -- : [c47d259b-2792-457f-99b8-a57a3c56240d] Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+F, [2018-05-24T19:05:11.157186 #14926] FATAL -- : [c47d259b-2792-457f-99b8-a57a3c56240d]   
+F, [2018-05-24T19:05:11.157228 #14926] FATAL -- : [c47d259b-2792-457f-99b8-a57a3c56240d] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:11.157351 #14926] FATAL -- : [c47d259b-2792-457f-99b8-a57a3c56240d]     11:     <th>Remote ip</th>
+[c47d259b-2792-457f-99b8-a57a3c56240d]     12:     <th>Request date</th>
+[c47d259b-2792-457f-99b8-a57a3c56240d]     13:   </tr>
+[c47d259b-2792-457f-99b8-a57a3c56240d]     14:   <% @requests.each do |app| %>
+[c47d259b-2792-457f-99b8-a57a3c56240d]     15:       <%= render "table_row", {app_request:app} %>
+[c47d259b-2792-457f-99b8-a57a3c56240d]     16:   <% end %>
+[c47d259b-2792-457f-99b8-a57a3c56240d]     17: </table>
+F, [2018-05-24T19:05:11.157386 #14926] FATAL -- : [c47d259b-2792-457f-99b8-a57a3c56240d]   
+F, [2018-05-24T19:05:11.157426 #14926] FATAL -- : [c47d259b-2792-457f-99b8-a57a3c56240d] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:11.377146 #14926]  INFO -- : [f0962542-6aad-46bd-ada5-319edb7e8c02] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:11 +0300
+I, [2018-05-24T19:05:11.377782 #14926]  INFO -- : [f0962542-6aad-46bd-ada5-319edb7e8c02] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:11.377833 #14926]  INFO -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:11.379094 #14926]  INFO -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:11.379981 #14926] DEBUG -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]   [1m[36mRequestModel Load (0.5ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:11.380523 #14926]  INFO -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]   Rendered main/show_requests.html.erb within layouts/application (1.3ms)
+I, [2018-05-24T19:05:11.380664 #14926]  INFO -- : [f0962542-6aad-46bd-ada5-319edb7e8c02] Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+F, [2018-05-24T19:05:11.381683 #14926] FATAL -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]   
+F, [2018-05-24T19:05:11.381736 #14926] FATAL -- : [f0962542-6aad-46bd-ada5-319edb7e8c02] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:11.381908 #14926] FATAL -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]     11:     <th>Remote ip</th>
+[f0962542-6aad-46bd-ada5-319edb7e8c02]     12:     <th>Request date</th>
+[f0962542-6aad-46bd-ada5-319edb7e8c02]     13:   </tr>
+[f0962542-6aad-46bd-ada5-319edb7e8c02]     14:   <% @requests.each do |app| %>
+[f0962542-6aad-46bd-ada5-319edb7e8c02]     15:       <%= render "table_row", {app_request:app} %>
+[f0962542-6aad-46bd-ada5-319edb7e8c02]     16:   <% end %>
+[f0962542-6aad-46bd-ada5-319edb7e8c02]     17: </table>
+F, [2018-05-24T19:05:11.381945 #14926] FATAL -- : [f0962542-6aad-46bd-ada5-319edb7e8c02]   
+F, [2018-05-24T19:05:11.381975 #14926] FATAL -- : [f0962542-6aad-46bd-ada5-319edb7e8c02] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:11.700532 #14926]  INFO -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:11 +0300
+I, [2018-05-24T19:05:11.701173 #14926]  INFO -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:11.701225 #14926]  INFO -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:11.702662 #14926]  INFO -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:11.703690 #14926] DEBUG -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:11.704217 #14926]  INFO -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]   Rendered main/show_requests.html.erb within layouts/application (1.5ms)
+I, [2018-05-24T19:05:11.704340 #14926]  INFO -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47] Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:05:11.705318 #14926] FATAL -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]   
+F, [2018-05-24T19:05:11.705356 #14926] FATAL -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:11.705525 #14926] FATAL -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     11:     <th>Remote ip</th>
+[fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     12:     <th>Request date</th>
+[fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     13:   </tr>
+[fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     14:   <% @requests.each do |app| %>
+[fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     15:       <%= render "table_row", {app_request:app} %>
+[fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     16:   <% end %>
+[fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]     17: </table>
+F, [2018-05-24T19:05:11.705556 #14926] FATAL -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47]   
+F, [2018-05-24T19:05:11.705602 #14926] FATAL -- : [fb0b1ba8-e52e-431c-a92b-9f9626b2ae47] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:11.947090 #14926]  INFO -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:11 +0300
+I, [2018-05-24T19:05:11.948050 #14926]  INFO -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:11.948149 #14926]  INFO -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:11.949999 #14926]  INFO -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:11.951316 #14926] DEBUG -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:11.952242 #14926]  INFO -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]   Rendered main/show_requests.html.erb within layouts/application (2.0ms)
+I, [2018-05-24T19:05:11.952453 #14926]  INFO -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:05:11.953993 #14926] FATAL -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]   
+F, [2018-05-24T19:05:11.954087 #14926] FATAL -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:11.954333 #14926] FATAL -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]     11:     <th>Remote ip</th>
+[eb4c2045-8306-41a8-95e0-28e63c6c793d]     12:     <th>Request date</th>
+[eb4c2045-8306-41a8-95e0-28e63c6c793d]     13:   </tr>
+[eb4c2045-8306-41a8-95e0-28e63c6c793d]     14:   <% @requests.each do |app| %>
+[eb4c2045-8306-41a8-95e0-28e63c6c793d]     15:       <%= render "table_row", {app_request:app} %>
+[eb4c2045-8306-41a8-95e0-28e63c6c793d]     16:   <% end %>
+[eb4c2045-8306-41a8-95e0-28e63c6c793d]     17: </table>
+F, [2018-05-24T19:05:11.954394 #14926] FATAL -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d]   
+F, [2018-05-24T19:05:11.954495 #14926] FATAL -- : [eb4c2045-8306-41a8-95e0-28e63c6c793d] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:12.283972 #14926]  INFO -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:12 +0300
+I, [2018-05-24T19:05:12.285246 #14926]  INFO -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:12.285393 #14926]  INFO -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:12.287586 #14926]  INFO -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:12.290521 #14926] DEBUG -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]   [1m[36mRequestModel Load (0.9ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:12.291412 #14926]  INFO -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]   Rendered main/show_requests.html.erb within layouts/application (3.7ms)
+I, [2018-05-24T19:05:12.291658 #14926]  INFO -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c] Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.9ms)
+F, [2018-05-24T19:05:12.293255 #14926] FATAL -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]   
+F, [2018-05-24T19:05:12.293318 #14926] FATAL -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:12.293542 #14926] FATAL -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     11:     <th>Remote ip</th>
+[29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     12:     <th>Request date</th>
+[29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     13:   </tr>
+[29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     14:   <% @requests.each do |app| %>
+[29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     15:       <%= render "table_row", {app_request:app} %>
+[29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     16:   <% end %>
+[29c3dc92-d7b8-458c-bd52-7bcb93783d6c]     17: </table>
+F, [2018-05-24T19:05:12.293594 #14926] FATAL -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c]   
+F, [2018-05-24T19:05:12.293644 #14926] FATAL -- : [29c3dc92-d7b8-458c-bd52-7bcb93783d6c] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:12.673589 #14926]  INFO -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:12 +0300
+I, [2018-05-24T19:05:12.674312 #14926]  INFO -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:12.674369 #14926]  INFO -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:12.676197 #14926]  INFO -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:12.677350 #14926] DEBUG -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:12.677958 #14926]  INFO -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]   Rendered main/show_requests.html.erb within layouts/application (1.6ms)
+I, [2018-05-24T19:05:12.678130 #14926]  INFO -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:12.679183 #14926] FATAL -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]   
+F, [2018-05-24T19:05:12.679228 #14926] FATAL -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:12.679393 #14926] FATAL -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]     11:     <th>Remote ip</th>
+[4227c5a2-1b65-4115-8e41-d3e63b31b8db]     12:     <th>Request date</th>
+[4227c5a2-1b65-4115-8e41-d3e63b31b8db]     13:   </tr>
+[4227c5a2-1b65-4115-8e41-d3e63b31b8db]     14:   <% @requests.each do |app| %>
+[4227c5a2-1b65-4115-8e41-d3e63b31b8db]     15:       <%= render "table_row", {app_request:app} %>
+[4227c5a2-1b65-4115-8e41-d3e63b31b8db]     16:   <% end %>
+[4227c5a2-1b65-4115-8e41-d3e63b31b8db]     17: </table>
+F, [2018-05-24T19:05:12.679425 #14926] FATAL -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db]   
+F, [2018-05-24T19:05:12.679456 #14926] FATAL -- : [4227c5a2-1b65-4115-8e41-d3e63b31b8db] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:13.001848 #14926]  INFO -- : [30458fd9-03c7-449a-94ce-6f182e46e736] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:13 +0300
+I, [2018-05-24T19:05:13.002654 #14926]  INFO -- : [30458fd9-03c7-449a-94ce-6f182e46e736] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:13.002720 #14926]  INFO -- : [30458fd9-03c7-449a-94ce-6f182e46e736]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:13.004410 #14926]  INFO -- : [30458fd9-03c7-449a-94ce-6f182e46e736]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:13.005630 #14926] DEBUG -- : [30458fd9-03c7-449a-94ce-6f182e46e736]   [1m[36mRequestModel Load (0.9ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:13.006224 #14926]  INFO -- : [30458fd9-03c7-449a-94ce-6f182e46e736]   Rendered main/show_requests.html.erb within layouts/application (1.7ms)
+I, [2018-05-24T19:05:13.006398 #14926]  INFO -- : [30458fd9-03c7-449a-94ce-6f182e46e736] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.9ms)
+F, [2018-05-24T19:05:13.007505 #14926] FATAL -- : [30458fd9-03c7-449a-94ce-6f182e46e736]   
+F, [2018-05-24T19:05:13.007567 #14926] FATAL -- : [30458fd9-03c7-449a-94ce-6f182e46e736] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:13.007734 #14926] FATAL -- : [30458fd9-03c7-449a-94ce-6f182e46e736]     11:     <th>Remote ip</th>
+[30458fd9-03c7-449a-94ce-6f182e46e736]     12:     <th>Request date</th>
+[30458fd9-03c7-449a-94ce-6f182e46e736]     13:   </tr>
+[30458fd9-03c7-449a-94ce-6f182e46e736]     14:   <% @requests.each do |app| %>
+[30458fd9-03c7-449a-94ce-6f182e46e736]     15:       <%= render "table_row", {app_request:app} %>
+[30458fd9-03c7-449a-94ce-6f182e46e736]     16:   <% end %>
+[30458fd9-03c7-449a-94ce-6f182e46e736]     17: </table>
+F, [2018-05-24T19:05:13.007776 #14926] FATAL -- : [30458fd9-03c7-449a-94ce-6f182e46e736]   
+F, [2018-05-24T19:05:13.007810 #14926] FATAL -- : [30458fd9-03c7-449a-94ce-6f182e46e736] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:13.400015 #14926]  INFO -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:13 +0300
+I, [2018-05-24T19:05:13.400884 #14926]  INFO -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:13.400960 #14926]  INFO -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:13.402784 #14926]  INFO -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:13.404027 #14926] DEBUG -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:13.405000 #14926]  INFO -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]   Rendered main/show_requests.html.erb within layouts/application (2.1ms)
+I, [2018-05-24T19:05:13.405217 #14926]  INFO -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:05:13.407008 #14926] FATAL -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]   
+F, [2018-05-24T19:05:13.407101 #14926] FATAL -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:13.407371 #14926] FATAL -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]     11:     <th>Remote ip</th>
+[c7b44bfb-2679-4651-a147-1f904ad8f3b2]     12:     <th>Request date</th>
+[c7b44bfb-2679-4651-a147-1f904ad8f3b2]     13:   </tr>
+[c7b44bfb-2679-4651-a147-1f904ad8f3b2]     14:   <% @requests.each do |app| %>
+[c7b44bfb-2679-4651-a147-1f904ad8f3b2]     15:       <%= render "table_row", {app_request:app} %>
+[c7b44bfb-2679-4651-a147-1f904ad8f3b2]     16:   <% end %>
+[c7b44bfb-2679-4651-a147-1f904ad8f3b2]     17: </table>
+F, [2018-05-24T19:05:13.407444 #14926] FATAL -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2]   
+F, [2018-05-24T19:05:13.407501 #14926] FATAL -- : [c7b44bfb-2679-4651-a147-1f904ad8f3b2] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:13.746203 #14926]  INFO -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:13 +0300
+I, [2018-05-24T19:05:13.747416 #14926]  INFO -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:13.747522 #14926]  INFO -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:13.749664 #14926]  INFO -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:13.750661 #14926] DEBUG -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:13.751235 #14926]  INFO -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]   Rendered main/show_requests.html.erb within layouts/application (1.4ms)
+I, [2018-05-24T19:05:13.751371 #14926]  INFO -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:13.752577 #14926] FATAL -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]   
+F, [2018-05-24T19:05:13.752682 #14926] FATAL -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:13.752864 #14926] FATAL -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]     11:     <th>Remote ip</th>
+[261c275d-8765-40e3-9743-4e02cbb8ea5c]     12:     <th>Request date</th>
+[261c275d-8765-40e3-9743-4e02cbb8ea5c]     13:   </tr>
+[261c275d-8765-40e3-9743-4e02cbb8ea5c]     14:   <% @requests.each do |app| %>
+[261c275d-8765-40e3-9743-4e02cbb8ea5c]     15:       <%= render "table_row", {app_request:app} %>
+[261c275d-8765-40e3-9743-4e02cbb8ea5c]     16:   <% end %>
+[261c275d-8765-40e3-9743-4e02cbb8ea5c]     17: </table>
+F, [2018-05-24T19:05:13.752907 #14926] FATAL -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c]   
+F, [2018-05-24T19:05:13.752940 #14926] FATAL -- : [261c275d-8765-40e3-9743-4e02cbb8ea5c] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:36.643712 #14926]  INFO -- : [47376d99-4a32-4159-b304-00f3b8861c1c] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:36 +0300
+I, [2018-05-24T19:05:36.644905 #14926]  INFO -- : [47376d99-4a32-4159-b304-00f3b8861c1c] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:36.645014 #14926]  INFO -- : [47376d99-4a32-4159-b304-00f3b8861c1c]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:36.647646 #14926]  INFO -- : [47376d99-4a32-4159-b304-00f3b8861c1c]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:36.648634 #14926] DEBUG -- : [47376d99-4a32-4159-b304-00f3b8861c1c]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:36.649324 #14926]  INFO -- : [47376d99-4a32-4159-b304-00f3b8861c1c]   Rendered main/show_requests.html.erb within layouts/application (1.5ms)
+I, [2018-05-24T19:05:36.649503 #14926]  INFO -- : [47376d99-4a32-4159-b304-00f3b8861c1c] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:36.650809 #14926] FATAL -- : [47376d99-4a32-4159-b304-00f3b8861c1c]   
+F, [2018-05-24T19:05:36.650888 #14926] FATAL -- : [47376d99-4a32-4159-b304-00f3b8861c1c] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:36.651088 #14926] FATAL -- : [47376d99-4a32-4159-b304-00f3b8861c1c]     11:     <th>Remote ip</th>
+[47376d99-4a32-4159-b304-00f3b8861c1c]     12:     <th>Request date</th>
+[47376d99-4a32-4159-b304-00f3b8861c1c]     13:   </tr>
+[47376d99-4a32-4159-b304-00f3b8861c1c]     14:   <% @requests.each do |app| %>
+[47376d99-4a32-4159-b304-00f3b8861c1c]     15:       <%= render "table_row", {app_request:app} %>
+[47376d99-4a32-4159-b304-00f3b8861c1c]     16:   <% end %>
+[47376d99-4a32-4159-b304-00f3b8861c1c]     17: </table>
+F, [2018-05-24T19:05:36.651152 #14926] FATAL -- : [47376d99-4a32-4159-b304-00f3b8861c1c]   
+F, [2018-05-24T19:05:36.651189 #14926] FATAL -- : [47376d99-4a32-4159-b304-00f3b8861c1c] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:37.311927 #14926]  INFO -- : [3e149df5-9634-4303-ae4f-77a0b80731bb] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:37 +0300
+I, [2018-05-24T19:05:37.312796 #14926]  INFO -- : [3e149df5-9634-4303-ae4f-77a0b80731bb] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:37.312864 #14926]  INFO -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:37.315208 #14926]  INFO -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:37.316245 #14926] DEBUG -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:37.316918 #14926]  INFO -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]   Rendered main/show_requests.html.erb within layouts/application (1.6ms)
+I, [2018-05-24T19:05:37.317068 #14926]  INFO -- : [3e149df5-9634-4303-ae4f-77a0b80731bb] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:37.318329 #14926] FATAL -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]   
+F, [2018-05-24T19:05:37.318398 #14926] FATAL -- : [3e149df5-9634-4303-ae4f-77a0b80731bb] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:37.318568 #14926] FATAL -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]     11:     <th>Remote ip</th>
+[3e149df5-9634-4303-ae4f-77a0b80731bb]     12:     <th>Request date</th>
+[3e149df5-9634-4303-ae4f-77a0b80731bb]     13:   </tr>
+[3e149df5-9634-4303-ae4f-77a0b80731bb]     14:   <% @requests.each do |app| %>
+[3e149df5-9634-4303-ae4f-77a0b80731bb]     15:       <%= render "table_row", {app_request:app} %>
+[3e149df5-9634-4303-ae4f-77a0b80731bb]     16:   <% end %>
+[3e149df5-9634-4303-ae4f-77a0b80731bb]     17: </table>
+F, [2018-05-24T19:05:37.318613 #14926] FATAL -- : [3e149df5-9634-4303-ae4f-77a0b80731bb]   
+F, [2018-05-24T19:05:37.318652 #14926] FATAL -- : [3e149df5-9634-4303-ae4f-77a0b80731bb] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:37.707390 #14926]  INFO -- : [2a697de9-a4d0-466c-965c-56229255adbd] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:37 +0300
+I, [2018-05-24T19:05:37.708148 #14926]  INFO -- : [2a697de9-a4d0-466c-965c-56229255adbd] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:37.708220 #14926]  INFO -- : [2a697de9-a4d0-466c-965c-56229255adbd]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:37.710584 #14926]  INFO -- : [2a697de9-a4d0-466c-965c-56229255adbd]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:37.711716 #14926] DEBUG -- : [2a697de9-a4d0-466c-965c-56229255adbd]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:37.712310 #14926]  INFO -- : [2a697de9-a4d0-466c-965c-56229255adbd]   Rendered main/show_requests.html.erb within layouts/application (1.6ms)
+I, [2018-05-24T19:05:37.712765 #14926]  INFO -- : [2a697de9-a4d0-466c-965c-56229255adbd] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:37.713830 #14926] FATAL -- : [2a697de9-a4d0-466c-965c-56229255adbd]   
+F, [2018-05-24T19:05:37.713869 #14926] FATAL -- : [2a697de9-a4d0-466c-965c-56229255adbd] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:37.714009 #14926] FATAL -- : [2a697de9-a4d0-466c-965c-56229255adbd]     11:     <th>Remote ip</th>
+[2a697de9-a4d0-466c-965c-56229255adbd]     12:     <th>Request date</th>
+[2a697de9-a4d0-466c-965c-56229255adbd]     13:   </tr>
+[2a697de9-a4d0-466c-965c-56229255adbd]     14:   <% @requests.each do |app| %>
+[2a697de9-a4d0-466c-965c-56229255adbd]     15:       <%= render "table_row", {app_request:app} %>
+[2a697de9-a4d0-466c-965c-56229255adbd]     16:   <% end %>
+[2a697de9-a4d0-466c-965c-56229255adbd]     17: </table>
+F, [2018-05-24T19:05:37.714039 #14926] FATAL -- : [2a697de9-a4d0-466c-965c-56229255adbd]   
+F, [2018-05-24T19:05:37.714074 #14926] FATAL -- : [2a697de9-a4d0-466c-965c-56229255adbd] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:37.920969 #14926]  INFO -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:37 +0300
+I, [2018-05-24T19:05:37.922118 #14926]  INFO -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:37.922209 #14926]  INFO -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:37.924286 #14926]  INFO -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:37.925552 #14926] DEBUG -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:37.926527 #14926]  INFO -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]   Rendered main/show_requests.html.erb within layouts/application (2.0ms)
+I, [2018-05-24T19:05:37.927668 #14926]  INFO -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:05:37.929840 #14926] FATAL -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]   
+F, [2018-05-24T19:05:37.929949 #14926] FATAL -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:37.930165 #14926] FATAL -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]     11:     <th>Remote ip</th>
+[234d1185-2898-4233-bf39-c2cc22e4f1b6]     12:     <th>Request date</th>
+[234d1185-2898-4233-bf39-c2cc22e4f1b6]     13:   </tr>
+[234d1185-2898-4233-bf39-c2cc22e4f1b6]     14:   <% @requests.each do |app| %>
+[234d1185-2898-4233-bf39-c2cc22e4f1b6]     15:       <%= render "table_row", {app_request:app} %>
+[234d1185-2898-4233-bf39-c2cc22e4f1b6]     16:   <% end %>
+[234d1185-2898-4233-bf39-c2cc22e4f1b6]     17: </table>
+F, [2018-05-24T19:05:37.930242 #14926] FATAL -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6]   
+F, [2018-05-24T19:05:37.930293 #14926] FATAL -- : [234d1185-2898-4233-bf39-c2cc22e4f1b6] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb___3188409543417250897_38665720'
+I, [2018-05-24T19:05:45.475189 #15027]  INFO -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:45 +0300
+I, [2018-05-24T19:05:45.479146 #15027]  INFO -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:45.479246 #15027]  INFO -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:45.509031 #15027]  INFO -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:45.512173 #15027] DEBUG -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]   [1m[36mRequestModel Load (1.4ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:45.513011 #15027]  INFO -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]   Rendered main/show_requests.html.erb within layouts/application (3.8ms)
+I, [2018-05-24T19:05:45.513247 #15027]  INFO -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5] Completed 500 Internal Server Error in 34ms (ActiveRecord: 6.6ms)
+F, [2018-05-24T19:05:45.514696 #15027] FATAL -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]   
+F, [2018-05-24T19:05:45.514762 #15027] FATAL -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:45.515007 #15027] FATAL -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     11:     <th>Remote ip</th>
+[4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     12:     <th>Request date</th>
+[4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     13:   </tr>
+[4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     14:   <% @requests.each do |app| %>
+[4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     15:       <%= render "table_row", {app_request:app} %>
+[4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     16:   <% end %>
+[4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]     17: </table>
+F, [2018-05-24T19:05:45.515061 #15027] FATAL -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5]   
+F, [2018-05-24T19:05:45.515107 #15027] FATAL -- : [4a8fcdb8-7a1e-431c-9d5f-6e7c996cbbd5] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:05:46.145560 #15027]  INFO -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:46 +0300
+I, [2018-05-24T19:05:46.146821 #15027]  INFO -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:46.146989 #15027]  INFO -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:46.149647 #15027]  INFO -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:46.151087 #15027] DEBUG -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:46.152166 #15027]  INFO -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]   Rendered main/show_requests.html.erb within layouts/application (2.3ms)
+I, [2018-05-24T19:05:46.152523 #15027]  INFO -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca] Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:05:46.154212 #15027] FATAL -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]   
+F, [2018-05-24T19:05:46.154274 #15027] FATAL -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:46.154543 #15027] FATAL -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]     11:     <th>Remote ip</th>
+[08d878c0-dbff-4dee-90a9-f45eb56480ca]     12:     <th>Request date</th>
+[08d878c0-dbff-4dee-90a9-f45eb56480ca]     13:   </tr>
+[08d878c0-dbff-4dee-90a9-f45eb56480ca]     14:   <% @requests.each do |app| %>
+[08d878c0-dbff-4dee-90a9-f45eb56480ca]     15:       <%= render "table_row", {app_request:app} %>
+[08d878c0-dbff-4dee-90a9-f45eb56480ca]     16:   <% end %>
+[08d878c0-dbff-4dee-90a9-f45eb56480ca]     17: </table>
+F, [2018-05-24T19:05:46.154582 #15027] FATAL -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca]   
+F, [2018-05-24T19:05:46.154621 #15027] FATAL -- : [08d878c0-dbff-4dee-90a9-f45eb56480ca] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:05:46.500060 #15027]  INFO -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:46 +0300
+I, [2018-05-24T19:05:46.501852 #15027]  INFO -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:46.501958 #15027]  INFO -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:46.503899 #15027]  INFO -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:46.505176 #15027] DEBUG -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:46.505925 #15027]  INFO -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]   Rendered main/show_requests.html.erb within layouts/application (1.9ms)
+I, [2018-05-24T19:05:46.506061 #15027]  INFO -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+F, [2018-05-24T19:05:46.507215 #15027] FATAL -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]   
+F, [2018-05-24T19:05:46.507300 #15027] FATAL -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:46.507538 #15027] FATAL -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]     11:     <th>Remote ip</th>
+[dd9e661a-667e-41bb-b714-d41ebb9dea2a]     12:     <th>Request date</th>
+[dd9e661a-667e-41bb-b714-d41ebb9dea2a]     13:   </tr>
+[dd9e661a-667e-41bb-b714-d41ebb9dea2a]     14:   <% @requests.each do |app| %>
+[dd9e661a-667e-41bb-b714-d41ebb9dea2a]     15:       <%= render "table_row", {app_request:app} %>
+[dd9e661a-667e-41bb-b714-d41ebb9dea2a]     16:   <% end %>
+[dd9e661a-667e-41bb-b714-d41ebb9dea2a]     17: </table>
+F, [2018-05-24T19:05:46.507610 #15027] FATAL -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a]   
+F, [2018-05-24T19:05:46.507643 #15027] FATAL -- : [dd9e661a-667e-41bb-b714-d41ebb9dea2a] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:05:46.771102 #15027]  INFO -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:46 +0300
+I, [2018-05-24T19:05:46.772015 #15027]  INFO -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:46.772118 #15027]  INFO -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:46.773876 #15027]  INFO -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:46.775081 #15027] DEBUG -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:46.775964 #15027]  INFO -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]   Rendered main/show_requests.html.erb within layouts/application (1.9ms)
+I, [2018-05-24T19:05:46.776192 #15027]  INFO -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:05:46.778128 #15027] FATAL -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]   
+F, [2018-05-24T19:05:46.778245 #15027] FATAL -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:46.778553 #15027] FATAL -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]     11:     <th>Remote ip</th>
+[d5cffc60-fc88-425b-8bc1-c574010c1e18]     12:     <th>Request date</th>
+[d5cffc60-fc88-425b-8bc1-c574010c1e18]     13:   </tr>
+[d5cffc60-fc88-425b-8bc1-c574010c1e18]     14:   <% @requests.each do |app| %>
+[d5cffc60-fc88-425b-8bc1-c574010c1e18]     15:       <%= render "table_row", {app_request:app} %>
+[d5cffc60-fc88-425b-8bc1-c574010c1e18]     16:   <% end %>
+[d5cffc60-fc88-425b-8bc1-c574010c1e18]     17: </table>
+F, [2018-05-24T19:05:46.778590 #15027] FATAL -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18]   
+F, [2018-05-24T19:05:46.778622 #15027] FATAL -- : [d5cffc60-fc88-425b-8bc1-c574010c1e18] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:05:55.526220 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a] Started GET "/4" for 127.0.0.1 at 2018-05-24 19:05:55 +0300
+I, [2018-05-24T19:05:55.527214 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a] Processing by MainController#save_request as HTML
+I, [2018-05-24T19:05:55.527311 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a]   Parameters: {"trap_id"=>"4"}
+D, [2018-05-24T19:05:55.555723 #15027] DEBUG -- : [21180630-7284-415b-9651-9da8b86ed09a]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T19:05:55.557440 #15027] DEBUG -- : [21180630-7284-415b-9651-9da8b86ed09a]   [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"4\"}"], ["cookies", "[[\"_requests_trap_session\",\"kQGaturVBFukrpT29KSVB1/1LKrzHO3S6q9wgcLgvxQLqil7cPGrdPKk24SQi75FMTHBTPhvan6U+WxVV5OFXP0RCv7F1GorRynfp1uW7Q0Xb3r6pdr3BYV5Bndsij5Nz8w0fjGizSC316Tgep4=--R8WsGQ+a6kuReKlH--vqAFb6/rGxkMuufYUqCaHA==\"]]"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "4"], ["created_at", "2018-05-24 16:05:55.555962"], ["updated_at", "2018-05-24 16:05:55.555962"]]
+D, [2018-05-24T19:05:55.600683 #15027] DEBUG -- : [21180630-7284-415b-9651-9da8b86ed09a]   [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T19:05:55.602802 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a]   Rendering main/_table_row.html.erb
+I, [2018-05-24T19:05:55.604743 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a]   Rendered main/_table_row.html.erb (1.7ms)
+D, [2018-05-24T19:05:55.605041 #15027] DEBUG -- : [21180630-7284-415b-9651-9da8b86ed09a] [ActionCable] Broadcasting to r4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>[[&quot;_requests_trap_session&quot;,&quot;kQGaturVBFukrpT29KSVB1/1LKrzHO3S6q9wgcLgvxQLqil7cPGrdPKk24SQi75FMTHBTPhvan6U+WxVV5OFXP0RCv7F1GorRynfp1uW7Q0Xb3r6pdr3BYV5Bndsij5Nz8w0fjGizSC316Tgep4=--R8WsGQ+a6kuReKlH--vqAFb6/rGxkMuufYUqCaHA==&quot;]]</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n</tr>"
+I, [2018-05-24T19:05:55.716047 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a]   Rendering main/save_request.html.erb within layouts/application
+I, [2018-05-24T19:05:55.724869 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a]   Rendered main/save_request.html.erb within layouts/application (0.8ms)
+I, [2018-05-24T19:05:55.726150 #15027]  INFO -- : [21180630-7284-415b-9651-9da8b86ed09a] Completed 200 OK in 199ms (Views: 10.6ms | ActiveRecord: 52.0ms)
+I, [2018-05-24T19:05:55.892002 #15027]  INFO -- : [69240f07-a5d5-4231-a241-33d40574e860] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:05:55 +0300
+I, [2018-05-24T19:05:56.089914 #15027]  INFO -- : [69240f07-a5d5-4231-a241-33d40574e860] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:05:56 +0300
+I, [2018-05-24T19:05:56.090163 #15027]  INFO -- : [69240f07-a5d5-4231-a241-33d40574e860] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:05:56.108053 #15027] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:05:58.907164 #15027]  INFO -- : [137ab30f-bada-4467-8593-54f1762e26bf] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:05:58 +0300
+I, [2018-05-24T19:05:58.908167 #15027]  INFO -- : [137ab30f-bada-4467-8593-54f1762e26bf] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:05:58.908339 #15027]  INFO -- : [137ab30f-bada-4467-8593-54f1762e26bf]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:05:58.910860 #15027]  INFO -- : [137ab30f-bada-4467-8593-54f1762e26bf]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:05:58.912428 #15027] DEBUG -- : [137ab30f-bada-4467-8593-54f1762e26bf]   [1m[36mRequestModel Load (0.9ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:05:58.913244 #15027]  INFO -- : [137ab30f-bada-4467-8593-54f1762e26bf]   Rendered main/show_requests.html.erb within layouts/application (2.2ms)
+I, [2018-05-24T19:05:58.913469 #15027]  INFO -- : [137ab30f-bada-4467-8593-54f1762e26bf] Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+F, [2018-05-24T19:05:58.914940 #15027] FATAL -- : [137ab30f-bada-4467-8593-54f1762e26bf]   
+F, [2018-05-24T19:05:58.915063 #15027] FATAL -- : [137ab30f-bada-4467-8593-54f1762e26bf] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:05:58.915473 #15027] FATAL -- : [137ab30f-bada-4467-8593-54f1762e26bf]     11:     <th>Remote ip</th>
+[137ab30f-bada-4467-8593-54f1762e26bf]     12:     <th>Request date</th>
+[137ab30f-bada-4467-8593-54f1762e26bf]     13:   </tr>
+[137ab30f-bada-4467-8593-54f1762e26bf]     14:   <% @requests.each do |app| %>
+[137ab30f-bada-4467-8593-54f1762e26bf]     15:       <%= render "table_row", {app_request:app} %>
+[137ab30f-bada-4467-8593-54f1762e26bf]     16:   <% end %>
+[137ab30f-bada-4467-8593-54f1762e26bf]     17: </table>
+F, [2018-05-24T19:05:58.915588 #15027] FATAL -- : [137ab30f-bada-4467-8593-54f1762e26bf]   
+F, [2018-05-24T19:05:58.915672 #15027] FATAL -- : [137ab30f-bada-4467-8593-54f1762e26bf] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:05:58.923239 #15027]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:05:58 +0300
+I, [2018-05-24T19:07:13.568522 #15027]  INFO -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:07:13 +0300
+I, [2018-05-24T19:07:13.569351 #15027]  INFO -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:07:13.569424 #15027]  INFO -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:07:13.571670 #15027]  INFO -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:07:13.572519 #15027] DEBUG -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]   [1m[36mRequestModel Load (0.5ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:07:13.573045 #15027]  INFO -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]   Rendered main/show_requests.html.erb within layouts/application (1.3ms)
+I, [2018-05-24T19:07:13.573178 #15027]  INFO -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+F, [2018-05-24T19:07:13.574750 #15027] FATAL -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]   
+F, [2018-05-24T19:07:13.574800 #15027] FATAL -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:07:13.574928 #15027] FATAL -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     11:     <th>Remote ip</th>
+[bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     12:     <th>Request date</th>
+[bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     13:   </tr>
+[bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     14:   <% @requests.each do |app| %>
+[bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     15:       <%= render "table_row", {app_request:app} %>
+[bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     16:   <% end %>
+[bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]     17: </table>
+F, [2018-05-24T19:07:13.575198 #15027] FATAL -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8]   
+F, [2018-05-24T19:07:13.575236 #15027] FATAL -- : [bfc25498-8bf0-4144-b2fd-75ae9e68e8a8] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:07:14.232671 #15027]  INFO -- : [7e002f30-4e00-44ef-9758-4e579baacca8] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:07:14 +0300
+I, [2018-05-24T19:07:14.233999 #15027]  INFO -- : [7e002f30-4e00-44ef-9758-4e579baacca8] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:07:14.234098 #15027]  INFO -- : [7e002f30-4e00-44ef-9758-4e579baacca8]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:07:14.236178 #15027]  INFO -- : [7e002f30-4e00-44ef-9758-4e579baacca8]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:07:14.237317 #15027] DEBUG -- : [7e002f30-4e00-44ef-9758-4e579baacca8]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc[0m
+I, [2018-05-24T19:07:14.238117 #15027]  INFO -- : [7e002f30-4e00-44ef-9758-4e579baacca8]   Rendered main/show_requests.html.erb within layouts/application (1.6ms)
+I, [2018-05-24T19:07:14.238278 #15027]  INFO -- : [7e002f30-4e00-44ef-9758-4e579baacca8] Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+F, [2018-05-24T19:07:14.239436 #15027] FATAL -- : [7e002f30-4e00-44ef-9758-4e579baacca8]   
+F, [2018-05-24T19:07:14.239484 #15027] FATAL -- : [7e002f30-4e00-44ef-9758-4e579baacca8] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column "request_date" does not exist
+LINE 1: ...M "request_models" WHERE (trap_id = '4') ORDER BY request_da...
+                                                             ^
+: SELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY request_date desc):
+F, [2018-05-24T19:07:14.239798 #15027] FATAL -- : [7e002f30-4e00-44ef-9758-4e579baacca8]     11:     <th>Remote ip</th>
+[7e002f30-4e00-44ef-9758-4e579baacca8]     12:     <th>Request date</th>
+[7e002f30-4e00-44ef-9758-4e579baacca8]     13:   </tr>
+[7e002f30-4e00-44ef-9758-4e579baacca8]     14:   <% @requests.each do |app| %>
+[7e002f30-4e00-44ef-9758-4e579baacca8]     15:       <%= render "table_row", {app_request:app} %>
+[7e002f30-4e00-44ef-9758-4e579baacca8]     16:   <% end %>
+[7e002f30-4e00-44ef-9758-4e579baacca8]     17: </table>
+F, [2018-05-24T19:07:14.239830 #15027] FATAL -- : [7e002f30-4e00-44ef-9758-4e579baacca8]   
+F, [2018-05-24T19:07:14.239863 #15027] FATAL -- : [7e002f30-4e00-44ef-9758-4e579baacca8] app/views/main/show_requests.html.erb:14:in `_app_views_main_show_requests_html_erb__2324492432075055396_42985400'
+I, [2018-05-24T19:07:44.008429 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.012693 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:07:44.012914 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:07:44.038250 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:07:44.041463 #16247] DEBUG -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   [1m[36mRequestModel Load (1.8ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:07:44.068153 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   Rendered main/_table_row.html.erb (1.1ms)
+I, [2018-05-24T19:07:44.068712 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   Rendered main/_table_row.html.erb (0.3ms)
+I, [2018-05-24T19:07:44.069067 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:07:44.069169 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a]   Rendered main/show_requests.html.erb within layouts/application (30.8ms)
+I, [2018-05-24T19:07:44.070927 #16247]  INFO -- : [6474ac01-a226-4bcd-bf03-047b70e8208a] Completed 200 OK in 58ms (Views: 26.4ms | ActiveRecord: 13.0ms)
+I, [2018-05-24T19:07:44.324239 #16247]  INFO -- : [99080b82-4fc0-4468-9805-993b9a838eb0] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.333637 #16247]  INFO -- : [99080b82-4fc0-4468-9805-993b9a838eb0] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.333754 #16247]  INFO -- : [99080b82-4fc0-4468-9805-993b9a838eb0] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:07:44.364718 #16247] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:07:44.385531 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.386323 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:07:44.386385 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:07:44.387872 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:07:44.388959 #16247] DEBUG -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   [1m[36mRequestModel Load (0.6ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:07:44.389672 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:07:44.389951 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:07:44.390184 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:07:44.390257 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375]   Rendered main/show_requests.html.erb within layouts/application (2.3ms)
+I, [2018-05-24T19:07:44.390936 #16247]  INFO -- : [f24f235f-7b45-46d9-afa7-74ae0c491375] Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+I, [2018-05-24T19:07:44.402426 #16247]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.528736 #16247]  INFO -- : [511f3e9a-d863-426e-b7fd-fa7cc21091b4] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.529232 #16247]  INFO -- : [511f3e9a-d863-426e-b7fd-fa7cc21091b4] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:44 +0300
+I, [2018-05-24T19:07:44.529305 #16247]  INFO -- : [511f3e9a-d863-426e-b7fd-fa7cc21091b4] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:07:44.553133 #16247] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:07:44.573991 #16247]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:07:44.574273 #16247]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:07:46.799197 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:07:46 +0300
+I, [2018-05-24T19:07:46.800601 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:07:46.800733 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:07:46.802674 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:07:46.803647 #16247] DEBUG -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   [1m[36mRequestModel Load (0.5ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:07:46.804508 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   Rendered main/_table_row.html.erb (0.3ms)
+I, [2018-05-24T19:07:46.804874 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:07:46.805181 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:07:46.805269 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6]   Rendered main/show_requests.html.erb within layouts/application (2.5ms)
+I, [2018-05-24T19:07:46.806123 #16247]  INFO -- : [698045e8-44cb-4522-b3e5-734a6f675ac6] Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+I, [2018-05-24T19:07:46.813774 #16247]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:46 +0300
+I, [2018-05-24T19:07:46.814137 #16247]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T19:07:46.949185 #16247]  INFO -- : [60885495-96bb-4cd4-9aa2-f6665fe26470] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:07:46 +0300
+I, [2018-05-24T19:07:46.949884 #16247]  INFO -- : [60885495-96bb-4cd4-9aa2-f6665fe26470] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:46 +0300
+I, [2018-05-24T19:07:46.949991 #16247]  INFO -- : [60885495-96bb-4cd4-9aa2-f6665fe26470] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:07:46.982149 #16247] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:07:46.994679 #16247]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:07:46.994958 #16247]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:07:47.777112 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:07:47 +0300
+I, [2018-05-24T19:07:47.778158 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:07:47.778264 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:07:47.780491 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:07:47.782344 #16247] DEBUG -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   [1m[36mRequestModel Load (1.2ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:07:47.783353 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   Rendered main/_table_row.html.erb (0.3ms)
+I, [2018-05-24T19:07:47.783807 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:07:47.784079 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:07:47.784154 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925]   Rendered main/show_requests.html.erb within layouts/application (3.5ms)
+I, [2018-05-24T19:07:47.784688 #16247]  INFO -- : [825d8727-5d2c-46c6-af4a-fb839a8b0925] Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 1.2ms)
+I, [2018-05-24T19:07:47.793242 #16247]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:47 +0300
+I, [2018-05-24T19:07:47.793579 #16247]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T19:07:47.916353 #16247]  INFO -- : [317b8209-ff13-42d3-9fc0-57e87c1baf28] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:07:47 +0300
+I, [2018-05-24T19:07:47.917195 #16247]  INFO -- : [317b8209-ff13-42d3-9fc0-57e87c1baf28] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:07:47 +0300
+I, [2018-05-24T19:07:47.917450 #16247]  INFO -- : [317b8209-ff13-42d3-9fc0-57e87c1baf28] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:07:47.951508 #16247] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:07:47.961139 #16247]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:07:47.961379 #16247]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:10:52.179920 #16722]  INFO -- : [aa4c8e55-8ae6-433d-b166-06629978e52f] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:10:52 +0300
+I, [2018-05-24T19:10:52.189155 #16722]  INFO -- : [aa4c8e55-8ae6-433d-b166-06629978e52f] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:10:52 +0300
+I, [2018-05-24T19:10:52.189250 #16722]  INFO -- : [aa4c8e55-8ae6-433d-b166-06629978e52f] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:10:52.201057 #16722] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:10:52.205904 #16722]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:10:52.206238 #16722]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:10:57.013234 #16722]  INFO -- : [c431f958-5e4f-4025-8ee8-fc06f4a058ea] Started GET "/" for 127.0.0.1 at 2018-05-24 19:10:57 +0300
+I, [2018-05-24T19:10:57.014675 #16722]  INFO -- : [c431f958-5e4f-4025-8ee8-fc06f4a058ea] Processing by MainController#index as HTML
+I, [2018-05-24T19:10:57.035160 #16722]  INFO -- : [c431f958-5e4f-4025-8ee8-fc06f4a058ea]   Rendering main/index.html.erb within layouts/application
+I, [2018-05-24T19:10:57.036491 #16722]  INFO -- : [c431f958-5e4f-4025-8ee8-fc06f4a058ea]   Rendered main/index.html.erb within layouts/application (1.1ms)
+I, [2018-05-24T19:10:57.038476 #16722]  INFO -- : [c431f958-5e4f-4025-8ee8-fc06f4a058ea] Completed 200 OK in 24ms (Views: 5.1ms)
+I, [2018-05-24T19:10:57.312772 #16722]  INFO -- : [95cb94de-0021-4fb2-bdd7-c138f9ec2afc] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:10:57 +0300
+I, [2018-05-24T19:10:57.313749 #16722]  INFO -- : [95cb94de-0021-4fb2-bdd7-c138f9ec2afc] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:10:57 +0300
+I, [2018-05-24T19:10:57.313842 #16722]  INFO -- : [95cb94de-0021-4fb2-bdd7-c138f9ec2afc] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:10:57.335570 #16722] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:11:04.470435 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:11:04 +0300
+I, [2018-05-24T19:11:04.471614 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:11:04.471704 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:11:04.491050 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:11:04.493865 #16722] DEBUG -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   [1m[36mRequestModel Load (1.4ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:11:04.515285 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   Rendered main/_table_row.html.erb (0.9ms)
+I, [2018-05-24T19:11:04.515658 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:11:04.515891 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:11:04.515971 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c]   Rendered main/show_requests.html.erb within layouts/application (24.8ms)
+I, [2018-05-24T19:11:04.516629 #16722]  INFO -- : [e92afd3e-c50d-400e-bff5-743e68e8a45c] Completed 200 OK in 45ms (Views: 19.4ms | ActiveRecord: 13.4ms)
+I, [2018-05-24T19:11:04.525135 #16722]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:11:04 +0300
+I, [2018-05-24T19:11:04.656685 #16722]  INFO -- : [f90ed846-bb40-496f-af80-5ad53698eac5] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:11:04 +0300
+I, [2018-05-24T19:11:04.657384 #16722]  INFO -- : [f90ed846-bb40-496f-af80-5ad53698eac5] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:11:04 +0300
+I, [2018-05-24T19:11:04.657474 #16722]  INFO -- : [f90ed846-bb40-496f-af80-5ad53698eac5] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:11:04.695075 #16722] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:11:04.705489 #16722]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:11:04.705827 #16722]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:11:06.029876 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:11:06 +0300
+I, [2018-05-24T19:11:06.031372 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:11:06.031514 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:11:06.033357 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:11:06.034823 #16722] DEBUG -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   [1m[36mRequestModel Load (1.0ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:11:06.035818 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T19:11:06.036262 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:11:06.036625 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:11:06.036730 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba]   Rendered main/show_requests.html.erb within layouts/application (3.2ms)
+I, [2018-05-24T19:11:06.037638 #16722]  INFO -- : [6a6f7180-92c3-4378-85e4-5807866626ba] Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.0ms)
+I, [2018-05-24T19:11:06.101141 #16722]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:11:06 +0300
+I, [2018-05-24T19:11:06.101334 #16722]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T19:11:06.227593 #16722]  INFO -- : [700c1f98-a76b-41f3-8d16-3e03f2245a1c] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:11:06 +0300
+I, [2018-05-24T19:11:06.228334 #16722]  INFO -- : [700c1f98-a76b-41f3-8d16-3e03f2245a1c] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:11:06 +0300
+I, [2018-05-24T19:11:06.228438 #16722]  INFO -- : [700c1f98-a76b-41f3-8d16-3e03f2245a1c] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:11:06.264683 #16722] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:11:06.273555 #16722]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:11:06.273910 #16722]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:13:06.183287 #17274]  INFO -- : [2517b598-0c7c-41d2-8016-a7818aaf9b0c] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:13:06 +0300
+I, [2018-05-24T19:13:06.194550 #17274]  INFO -- : [2517b598-0c7c-41d2-8016-a7818aaf9b0c] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:06 +0300
+I, [2018-05-24T19:13:06.194662 #17274]  INFO -- : [2517b598-0c7c-41d2-8016-a7818aaf9b0c] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:13:06.206514 #17274] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:13:06.212662 #17274]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:13:06.213162 #17274]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:13:10.447345 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:13:10 +0300
+I, [2018-05-24T19:13:10.448360 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:13:10.448425 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:13:10.470043 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:13:10.473286 #17274] DEBUG -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   [1m[36mRequestModel Load (1.5ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:13:10.492354 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   Rendered main/_table_row.html.erb (0.7ms)
+I, [2018-05-24T19:13:10.492631 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:10.492881 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:10.492960 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249]   Rendered main/show_requests.html.erb within layouts/application (22.8ms)
+I, [2018-05-24T19:13:10.494272 #17274]  INFO -- : [4c2ef775-0dd3-4844-8754-6c9548947249] Completed 200 OK in 46ms (Views: 18.9ms | ActiveRecord: 11.3ms)
+I, [2018-05-24T19:13:10.501472 #17274]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:10 +0300
+I, [2018-05-24T19:13:10.501760 #17274]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T19:13:10.736128 #17274]  INFO -- : [463516d9-d9b0-4466-ae08-dfefa6253903] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:13:10 +0300
+I, [2018-05-24T19:13:10.736624 #17274]  INFO -- : [463516d9-d9b0-4466-ae08-dfefa6253903] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:10 +0300
+I, [2018-05-24T19:13:10.736687 #17274]  INFO -- : [463516d9-d9b0-4466-ae08-dfefa6253903] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:13:10.768483 #17274] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:13:10.792029 #17274]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:13:10.792303 #17274]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:13:12.176091 #17274]  INFO -- : [8379e3fb-fb03-4ecd-9266-10ddbde93137] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:13:12 +0300
+I, [2018-05-24T19:13:12.176537 #17274]  INFO -- : [8379e3fb-fb03-4ecd-9266-10ddbde93137] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:12 +0300
+I, [2018-05-24T19:13:12.176593 #17274]  INFO -- : [8379e3fb-fb03-4ecd-9266-10ddbde93137] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:13:12.178743 #17274] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:13:12.179240 #17274]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:13:12.179412 #17274]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:13:14.573590 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177] Started GET "/4" for 127.0.0.1 at 2018-05-24 19:13:14 +0300
+I, [2018-05-24T19:13:14.574377 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177] Processing by MainController#save_request as HTML
+I, [2018-05-24T19:13:14.574441 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   Parameters: {"trap_id"=>"4"}
+D, [2018-05-24T19:13:14.576715 #17274] DEBUG -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T19:13:14.579058 #17274] DEBUG -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   [1m[36mRequestModel Create (0.7ms)[0m  [1m[32mINSERT INTO "request_models" ("remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/4"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"4\"}"], ["cookies", "[[\"_requests_trap_session\",\"m/ae4HfOmrt/0p0APUCkiu2GZUV3mSKpfCVRT2Hc07tNxu89adH0boAMXzxeSAUAyyr4qPmX5YoEjKf6QnQ4xHRMAIQ1+tfy0LOlZAotpBnJ9wHDow0K3GUlk4kKodMxE27DWdAY1HO2xzWA0zk=--3uPyNneoX7jIdeCW--8NX5lQgm/YvPBM42tpJJDQ==\"]]"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "4"], ["created_at", "2018-05-24 16:13:14.577040"], ["updated_at", "2018-05-24 16:13:14.577040"]]
+D, [2018-05-24T19:13:14.600632 #17274] DEBUG -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T19:13:14.601880 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   Rendering main/_table_row.html.erb
+I, [2018-05-24T19:13:14.602950 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   Rendered main/_table_row.html.erb (0.9ms)
+D, [2018-05-24T19:13:14.603098 #17274] DEBUG -- : [ed4c100a-e64f-4788-9e12-02738c9e8177] [ActionCable] Broadcasting to r4: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>[[&quot;_requests_trap_session&quot;,&quot;m/ae4HfOmrt/0p0APUCkiu2GZUV3mSKpfCVRT2Hc07tNxu89adH0boAMXzxeSAUAyyr4qPmX5YoEjKf6QnQ4xHRMAIQ1+tfy0LOlZAotpBnJ9wHDow0K3GUlk4kKodMxE27DWdAY1HO2xzWA0zk=--3uPyNneoX7jIdeCW--8NX5lQgm/YvPBM42tpJJDQ==&quot;]]</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 16:13:14 UTC</td>\n</tr>"
+I, [2018-05-24T19:13:14.605750 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   Rendering main/save_request.html.erb within layouts/application
+I, [2018-05-24T19:13:14.606999 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177]   Rendered main/save_request.html.erb within layouts/application (1.1ms)
+I, [2018-05-24T19:13:14.607910 #17274]  INFO -- : [ed4c100a-e64f-4788-9e12-02738c9e8177] Completed 200 OK in 33ms (Views: 2.4ms | ActiveRecord: 21.9ms)
+D, [2018-05-24T19:13:14.609087 #17274] DEBUG -- : RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>[[&quot;_requests_trap_session&quot;,&quot;m/ae4HfOmrt/0p0APUCkiu2GZUV3mSKpfCVRT2Hc07tNxu89adH0boAMXzxeSAUAyyr4qPmX5YoEjKf6QnQ4xHRMAIQ1+t... (via streamed from r4)
+D, [2018-05-24T19:13:14.609374 #17274] DEBUG -- : RequestsChannel transmitting "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4&quot;}</td>\n  <td>/4</td>\n  <td>[[&quot;_requests_trap_session&quot;,&quot;m/ae4HfOmrt/0p0APUCkiu2GZUV3mSKpfCVRT2Hc07tNxu89adH0boAMXzxeSAUAyyr4qPmX5YoEjKf6QnQ4xHRMAIQ1+t... (via streamed from r4)
+E, [2018-05-24T19:13:14.612532 #17274] ERROR -- : Unable to process RequestsChannel#update
+E, [2018-05-24T19:13:14.613034 #17274] ERROR -- : Unable to process RequestsChannel#update
+I, [2018-05-24T19:13:24.666271 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05] Started GET "/4/requests" for 127.0.0.1 at 2018-05-24 19:13:24 +0300
+I, [2018-05-24T19:13:24.667093 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:13:24.667181 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Parameters: {"trap_id"=>"4"}
+I, [2018-05-24T19:13:24.668916 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:13:24.670277 #17274] DEBUG -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   [1m[36mRequestModel Load (0.7ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4') ORDER BY created_at desc[0m
+I, [2018-05-24T19:13:24.670988 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:24.671254 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:24.671497 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:24.671763 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:24.671863 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05]   Rendered main/show_requests.html.erb within layouts/application (2.8ms)
+I, [2018-05-24T19:13:24.672649 #17274]  INFO -- : [1d858c87-ed62-433f-a607-c9b24a6bfe05] Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms)
+I, [2018-05-24T19:13:24.683014 #17274]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:24 +0300
+I, [2018-05-24T19:13:24.683311 #17274]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T19:13:24.927105 #17274]  INFO -- : [019b2ec4-48ee-4877-b73a-21bf2beaec80] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:13:24 +0300
+I, [2018-05-24T19:13:24.927661 #17274]  INFO -- : [019b2ec4-48ee-4877-b73a-21bf2beaec80] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:24 +0300
+I, [2018-05-24T19:13:24.927741 #17274]  INFO -- : [019b2ec4-48ee-4877-b73a-21bf2beaec80] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:13:24.963207 #17274] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:13:24.984288 #17274]  INFO -- : RequestsChannel is transmitting the subscription confirmation
+I, [2018-05-24T19:13:24.984646 #17274]  INFO -- : RequestsChannel is streaming from r4
+I, [2018-05-24T19:13:32.191093 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654] Started GET "/4222" for 127.0.0.1 at 2018-05-24 19:13:32 +0300
+I, [2018-05-24T19:13:32.192448 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654] Processing by MainController#save_request as HTML
+I, [2018-05-24T19:13:32.192592 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   Parameters: {"trap_id"=>"4222"}
+D, [2018-05-24T19:13:32.195297 #17274] DEBUG -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2018-05-24T19:13:32.197345 #17274] DEBUG -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   [1m[36mRequestModel Create (0.5ms)[0m  [1m[32mINSERT INTO "request_models" ("remote_ip", "request_method", "scheme_request", "query_string", "query_params", "cookies", "headers", "trap_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["remote_ip", "127.0.0.1"], ["request_method", "GET"], ["scheme_request", "http"], ["query_string", "/4222"], ["query_params", "{\"controller\":\"main\",\"action\":\"save_request\",\"trap_id\":\"4222\"}"], ["cookies", "[[\"_requests_trap_session\",\"BwM5DukcalJgVEOHRjb4xMnh1X6SIn7/R+XZZlsrZY9ETqM/c4+Rfc7AeDSbBjF3fl7wcrXp528uqyfuAfLTr00pyqyUkmuWttwcvMH7AmG8BK07vi9v8u9Cee71RYJZOEWsf1Fb+vlaLrPV5bQ=--W7/ZQjOY2WHOaoek--5tdJ84V/cLn8Ky9+SFAiaA==\"]]"], ["headers", "{\"X-Frame-Options\":\"SAMEORIGIN\",\"X-XSS-Protection\":\"1; mode=block\",\"X-Content-Type-Options\":\"nosniff\",\"X-Download-Options\":\"noopen\",\"X-Permitted-Cross-Domain-Policies\":\"none\",\"Referrer-Policy\":\"strict-origin-when-cross-origin\"}"], ["trap_id", "4222"], ["created_at", "2018-05-24 16:13:32.195596"], ["updated_at", "2018-05-24 16:13:32.195596"]]
+D, [2018-05-24T19:13:32.250173 #17274] DEBUG -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   [1m[35m (52.2ms)[0m  [1m[35mCOMMIT[0m
+I, [2018-05-24T19:13:32.251014 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   Rendering main/_table_row.html.erb
+I, [2018-05-24T19:13:32.251690 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   Rendered main/_table_row.html.erb (0.4ms)
+D, [2018-05-24T19:13:32.251927 #17274] DEBUG -- : [2bcdba25-e50b-4260-a098-6d9c0012a654] [ActionCable] Broadcasting to r4222: "<tr>\n  <td>{&quot;controller&quot;:&quot;main&quot;,&quot;action&quot;:&quot;save_request&quot;,&quot;trap_id&quot;:&quot;4222&quot;}</td>\n  <td>/4222</td>\n  <td>[[&quot;_requests_trap_session&quot;,&quot;BwM5DukcalJgVEOHRjb4xMnh1X6SIn7/R+XZZlsrZY9ETqM/c4+Rfc7AeDSbBjF3fl7wcrXp528uqyfuAfLTr00pyqyUkmuWttwcvMH7AmG8BK07vi9v8u9Cee71RYJZOEWsf1Fb+vlaLrPV5bQ=--W7/ZQjOY2WHOaoek--5tdJ84V/cLn8Ky9+SFAiaA==&quot;]]</td>\n  <td>{&quot;X-Frame-Options&quot;:&quot;SAMEORIGIN&quot;,&quot;X-XSS-Protection&quot;:&quot;1; mode=block&quot;,&quot;X-Content-Type-Options&quot;:&quot;nosniff&quot;,&quot;X-Download-Options&quot;:&quot;noopen&quot;,&quot;X-Permitted-Cross-Domain-Policies&quot;:&quot;none&quot;,&quot;Referrer-Policy&quot;:&quot;strict-origin-when-cross-origin&quot;}</td>\n  <td>http</td>\n  <td>GET</td>\n  <td>127.0.0.1</td>\n  <td>2018-05-24 16:13:32 UTC</td>\n</tr>"
+I, [2018-05-24T19:13:32.253681 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   Rendering main/save_request.html.erb within layouts/application
+I, [2018-05-24T19:13:32.254503 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654]   Rendered main/save_request.html.erb within layouts/application (0.6ms)
+I, [2018-05-24T19:13:32.255908 #17274]  INFO -- : [2bcdba25-e50b-4260-a098-6d9c0012a654] Completed 200 OK in 63ms (Views: 2.6ms | ActiveRecord: 52.8ms)
+I, [2018-05-24T19:13:32.264074 #17274]  INFO -- : Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:32 +0300
+I, [2018-05-24T19:13:32.264260 #17274]  INFO -- : RequestsChannel stopped streaming from r4
+I, [2018-05-24T19:13:32.400598 #17274]  INFO -- : [f795c79b-d933-48c3-9818-39f73e1c306a] Started GET "/cable" for 127.0.0.1 at 2018-05-24 19:13:32 +0300
+I, [2018-05-24T19:13:32.401034 #17274]  INFO -- : [f795c79b-d933-48c3-9818-39f73e1c306a] Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-24 19:13:32 +0300
+I, [2018-05-24T19:13:32.401095 #17274]  INFO -- : [f795c79b-d933-48c3-9818-39f73e1c306a] Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+E, [2018-05-24T19:13:32.416787 #17274] ERROR -- : Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"RequestsChannel\"}"}) [TypeError - no implicit conversion of nil into String]: /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `+' | /home/vladyslav/heroku/REQUESTS-TRAP/app/channels/requests_channel.rb:3:in `subscribed' | /var/lib/gems/2.3.0/gems/actioncable-5.2.0/lib/action_cable/channel/base.rb:179:in `block in subscribe_to_channel' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks' | /var/lib/gems/2.3.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:83:in `wrap'
+I, [2018-05-24T19:13:34.523104 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194] Started GET "/4222/requests" for 127.0.0.1 at 2018-05-24 19:13:34 +0300
+I, [2018-05-24T19:13:34.524271 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194] Processing by MainController#show_requests as HTML
+I, [2018-05-24T19:13:34.524361 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Parameters: {"trap_id"=>"4222"}
+I, [2018-05-24T19:13:34.526454 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendering main/show_requests.html.erb within layouts/application
+D, [2018-05-24T19:13:34.527818 #17274] DEBUG -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   [1m[36mRequestModel Load (0.8ms)[0m  [1m[34mSELECT "request_models".* FROM "request_models" WHERE (trap_id = '4222') ORDER BY created_at desc[0m
+I, [2018-05-24T19:13:34.528940 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.529249 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:34.530824 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.4ms)
+I, [2018-05-24T19:13:34.531394 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.3ms)
+I, [2018-05-24T19:13:34.531826 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.532463 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.532739 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:34.533112 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.533975 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.7ms)
+I, [2018-05-24T19:13:34.534354 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.534756 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.535401 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.1ms)
+I, [2018-05-24T19:13:34.535835 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.536234 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.536636 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.2ms)
+I, [2018-05-24T19:13:34.537540 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/_table_row.html.erb (0.3ms)
+I, [2018-05-24T19:13:34.537632 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194]   Rendered main/show_requests.html.erb within layouts/application (11.0ms)
+I, [2018-05-24T19:13:34.538614 #17274]  INFO -- : [97c07ac1-dfad-4e21-894a-90dfc3d40194] Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.8ms)

@@ -57,7 +57,7 @@ a:link,a:active,a:visited,a:hover {
 .table-container tr:nth-child(odd){
     background-color: #BBBBBB;
 }
-.table-container th.min-50{
+.table-container th.small-column{
     min-width: 60px;
 }
 h2{
