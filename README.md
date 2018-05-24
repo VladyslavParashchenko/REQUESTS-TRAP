@@ -1,24 +1,6 @@
-# README
+## Requests Trap: A tool for capture and display HTTP requests.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  This simple tool is useful during the development of apps that
+  integrate with external services, such as http clients, webhooks,
+  etc. The Requests Trap app ('Req App') provides these services with
+  an endpoint to which they can send requests and notifications.
