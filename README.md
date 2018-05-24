@@ -1,4 +1,4 @@
- Requests Trap: A tool for capture and display HTTP requests.
+ ##Requests Trap: A tool for capture and display HTTP requests.
 
   This simple tool is useful during the development of apps that
   integrate with external services, such as http clients, webhooks,
